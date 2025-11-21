@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100PSVM" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/T100PSVM" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-D__WXDEBUG__" />
+					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+					<Add directory="include/view" />
+					<Add directory="include/serve" />
+					<Add directory="include/store" />
+					<Add directory="include/skeletal" />
+					<Add directory="include/vm" />
+					<Add directory="include/host/intel" />
+					<Add directory="include/vm/host" />
+					<Add directory="include/vm/host/register" />
+					<Add directory="include/base" />
+					<Add directory="include/data" />
+					<Add directory="include/host" />
+					<Add directory="include/vm/host/instruct" />
+					<Add directory="include/host/intel/instruct" />
+					<Add directory="include/utils" />
+					<Add directory="include/host/universal" />
+					<Add directory="include/host/universal/instruct" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="libwxmsw30ud.a" />
+					<Add directory="$(#wx)/lib/gcc_dll" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100PSVM" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+					<Add directory="include/view" />
+					<Add directory="include/serve" />
+					<Add directory="include/store" />
+					<Add directory="include/skeletal" />
+					<Add directory="include/vm" />
+					<Add directory="include/host/intel" />
+					<Add directory="include/vm/host" />
+					<Add directory="include/vm/host/register" />
+					<Add directory="include/base" />
+					<Add directory="include/data" />
+					<Add directory="include/host" />
+					<Add directory="include/vm/host/instruct" />
+					<Add directory="include/host/intel/instruct" />
+					<Add directory="include/utils" />
+					<Add directory="include/host/universal" />
+					<Add directory="include/host/universal/instruct" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libwxmsw30u.a" />
+					<Add directory="$(#wx)/lib/gcc_dll" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-pipe" />
+			<Add option="-mthreads" />
+			<Add option="-D__GNUWIN32__" />
+			<Add option="-D__WXMSW__" />
+			<Add option="-DWXUSINGDLL" />
+			<Add option="-DwxUSE_UNICODE" />
+			<Add directory="$(#wx)/include" />
+			<Add directory="." />
+			<Add directory="include" />
+			<Add directory="include/library/common" />
+			<Add directory="include/library/thread" />
+			<Add directory="include/library/storage" />
+			<Add directory="include/library/storage/file" />
+			<Add directory="include/library/storage/folder" />
+			<Add directory="include/library/storage/path" />
+			<Add directory="include/wx" />
+			<Add directory="include/wx/dialog" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add directory="$(#wx)/include" />
+		</ResourceCompiler>
+		<Linker>
+			<Add option="-mthreads" />
+		</Linker>
+		<Unit filename="T100PSVMApp.cpp" />
+		<Unit filename="T100PSVMApp.h" />
+		<Unit filename="T100PSVMMain.cpp" />
+		<Unit filename="T100PSVMMain.h" />
+		<Unit filename="include/T100Common.h" />
+		<Unit filename="include/base/T100PSVMCommon.h" />
+		<Unit filename="include/base/T100PSVMConfig.h" />
+		<Unit filename="include/data/T100PSVMInfo.h" />
+		<Unit filename="include/data/T100WxFileInfo.h" />
+		<Unit filename="include/host/T100VM64.h" />
+		<Unit filename="include/host/T100VMIntel64.h" />
+		<Unit filename="include/host/intel/T100BusIntel64.h" />
+		<Unit filename="include/host/intel/T100CPUIntel64.h" />
+		<Unit filename="include/host/intel/T100HostIntel64.h" />
+		<Unit filename="include/host/intel/T100MemoryIntel64.h" />
+		<Unit filename="include/host/intel/instruct/T100AllInstructsIntel64.h" />
+		<Unit filename="include/host/intel/instruct/T100InstructIntel64.h" />
+		<Unit filename="include/host/intel/instruct/T100InstructIntel64Je.h" />
+		<Unit filename="include/host/intel/instruct/T100InstructIntel64Jmp.h" />
+		<Unit filename="include/host/intel/instruct/T100InstructIntel64Jz.h" />
+		<Unit filename="include/host/intel/instruct/T100InstructIntel64Mov.h" />
+		<Unit filename="include/host/intel/instruct/T100InstructIntel64Test.h" />
+		<Unit filename="include/host/intel/instruct/T100InstructSetIntel64.h" />
+		<Unit filename="include/host/universal/T100Bus64.h" />
+		<Unit filename="include/host/universal/T100CPU64.h" />
+		<Unit filename="include/host/universal/T100CPU64Base.h" />
+		<Unit filename="include/host/universal/T100Counter64.h" />
+		<Unit filename="include/host/universal/T100Generator64.h" />
+		<Unit filename="include/host/universal/T100Host64.h" />
+		<Unit filename="include/host/universal/T100Memory64.h" />
+		<Unit filename="include/host/universal/instruct/T100AllInstructs64.h" />
+		<Unit filename="include/host/universal/instruct/T100Instruct64.h" />
+		<Unit filename="include/host/universal/instruct/T100Instruct64Je.h" />
+		<Unit filename="include/host/universal/instruct/T100Instruct64Jmp.h" />
+		<Unit filename="include/host/universal/instruct/T100Instruct64Jz.h" />
+		<Unit filename="include/host/universal/instruct/T100Instruct64Mov.h" />
+		<Unit filename="include/host/universal/instruct/T100Instruct64Test.h" />
+		<Unit filename="include/host/universal/instruct/T100InstructSet64.h" />
+		<Unit filename="include/library/common/T100BitTypes.h" />
+		<Unit filename="include/library/common/T100Constants.h" />
+		<Unit filename="include/library/common/T100DataTypes.h" />
+		<Unit filename="include/library/common/T100StringTypes.h" />
+		<Unit filename="include/library/storage/file/T100File.h" />
+		<Unit filename="include/library/storage/folder/T100Folder.h" />
+		<Unit filename="include/library/storage/path/T100PathTools.h" />
+		<Unit filename="include/library/thread/T100Thread.h" />
+		<Unit filename="include/serve/T100PSVMServe.h" />
+		<Unit filename="include/serve/T100VMServe.h" />
+		<Unit filename="include/skeletal/T100PSVMInvoking.h" />
+		<Unit filename="include/skeletal/T100PSVMSkeletal.h" />
+		<Unit filename="include/skeletal/T100PSVMSkeletalBase.h" />
+		<Unit filename="include/store/T100PSVMFile.h" />
+		<Unit filename="include/store/T100PSVMStore.h" />
+		<Unit filename="include/store/T100XML.h" />
+		<Unit filename="include/utils/T100TypeTools.h" />
+		<Unit filename="include/view/T100MainMenu.h" />
+		<Unit filename="include/view/T100PSVMView.h" />
+		<Unit filename="include/vm/T100VM.h" />
+		<Unit filename="include/vm/host/T100Bus.h" />
+		<Unit filename="include/vm/host/T100CPU.h" />
+		<Unit filename="include/vm/host/T100Device.h" />
+		<Unit filename="include/vm/host/T100Host.h" />
+		<Unit filename="include/vm/host/T100Memory.h" />
+		<Unit filename="include/vm/host/T100Port.h" />
+		<Unit filename="include/vm/host/T100Register.h" />
+		<Unit filename="include/vm/host/instruct/T100Instruct.h" />
+		<Unit filename="include/vm/host/instruct/T100InstructSet.h" />
+		<Unit filename="include/vm/host/register/T100Register128.h" />
+		<Unit filename="include/vm/host/register/T100Register32.h" />
+		<Unit filename="include/vm/host/register/T100Register64.h" />
+		<Unit filename="include/wx/T100DebugFrame.h" />
+		<Unit filename="include/wx/T100VMFrame.h" />
+		<Unit filename="include/wx/dialog/T100PSVMCreateDialog.h" />
+		<Unit filename="resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="src/base/T100PSVMConfig.cpp" />
+		<Unit filename="src/data/T100PSVMInfo.cpp" />
+		<Unit filename="src/data/T100WxFileInfo.cpp" />
+		<Unit filename="src/host/T100VM64.cpp" />
+		<Unit filename="src/host/T100VMIntel64.cpp" />
+		<Unit filename="src/host/intel/T100BusIntel64.cpp" />
+		<Unit filename="src/host/intel/T100CPUIntel64.cpp" />
+		<Unit filename="src/host/intel/T100HostIntel64.cpp" />
+		<Unit filename="src/host/intel/T100MemoryIntel64.cpp" />
+		<Unit filename="src/host/intel/instruct/T100InstructIntel64.cpp" />
+		<Unit filename="src/host/intel/instruct/T100InstructIntel64Je.cpp" />
+		<Unit filename="src/host/intel/instruct/T100InstructIntel64Jmp.cpp" />
+		<Unit filename="src/host/intel/instruct/T100InstructIntel64Jz.cpp" />
+		<Unit filename="src/host/intel/instruct/T100InstructIntel64Mov.cpp" />
+		<Unit filename="src/host/intel/instruct/T100InstructIntel64Test.cpp" />
+		<Unit filename="src/host/intel/instruct/T100InstructSetIntel64.cpp" />
+		<Unit filename="src/host/universal/T100Bus64.cpp" />
+		<Unit filename="src/host/universal/T100CPU64.cpp" />
+		<Unit filename="src/host/universal/T100CPU64Base.cpp" />
+		<Unit filename="src/host/universal/T100Counter64.cpp" />
+		<Unit filename="src/host/universal/T100Generator64.cpp" />
+		<Unit filename="src/host/universal/T100Host64.cpp" />
+		<Unit filename="src/host/universal/T100Memory64.cpp" />
+		<Unit filename="src/host/universal/instruct/T100Instruct64.cpp" />
+		<Unit filename="src/host/universal/instruct/T100Instruct64Je.cpp" />
+		<Unit filename="src/host/universal/instruct/T100Instruct64Jmp.cpp" />
+		<Unit filename="src/host/universal/instruct/T100Instruct64Jz.cpp" />
+		<Unit filename="src/host/universal/instruct/T100Instruct64Mov.cpp" />
+		<Unit filename="src/host/universal/instruct/T100Instruct64Test.cpp" />
+		<Unit filename="src/host/universal/instruct/T100InstructSet64.cpp" />
+		<Unit filename="src/library/storage/file/T100File.cpp" />
+		<Unit filename="src/library/storage/folder/T100Folder.cpp" />
+		<Unit filename="src/library/storage/path/T100PathTools.cpp" />
+		<Unit filename="src/library/thread/T100Thread.cpp" />
+		<Unit filename="src/serve/T100PSVMServe.cpp" />
+		<Unit filename="src/serve/T100VMServe.cpp" />
+		<Unit filename="src/skeletal/T100PSVMInvoking.cpp" />
+		<Unit filename="src/skeletal/T100PSVMSkeletal.cpp" />
+		<Unit filename="src/skeletal/T100PSVMSkeletalBase.cpp" />
+		<Unit filename="src/store/T100PSVMFile.cpp" />
+		<Unit filename="src/store/T100PSVMStore.cpp" />
+		<Unit filename="src/store/T100XML.cpp" />
+		<Unit filename="src/utils/T100TypeTools.cpp" />
+		<Unit filename="src/view/T100MainMenu.cpp" />
+		<Unit filename="src/view/T100PSVMView.cpp" />
+		<Unit filename="src/vm/T100VM.cpp" />
+		<Unit filename="src/vm/host/T100Bus.cpp" />
+		<Unit filename="src/vm/host/T100CPU.cpp" />
+		<Unit filename="src/vm/host/T100Device.cpp" />
+		<Unit filename="src/vm/host/T100Host.cpp" />
+		<Unit filename="src/vm/host/T100Memory.cpp" />
+		<Unit filename="src/vm/host/T100Port.cpp" />
+		<Unit filename="src/vm/host/T100Register.cpp" />
+		<Unit filename="src/vm/host/instruct/T100Instruct.cpp" />
+		<Unit filename="src/vm/host/instruct/T100InstructSet.cpp" />
+		<Unit filename="src/vm/host/register/T100Register128.cpp" />
+		<Unit filename="src/vm/host/register/T100Register32.cpp" />
+		<Unit filename="src/vm/host/register/T100Register64.cpp" />
+		<Unit filename="src/wx/T100DebugFrame.cpp" />
+		<Unit filename="src/wx/T100VMFrame.cpp" />
+		<Unit filename="src/wx/dialog/T100PSVMCreateDialog.cpp" />
+		<Unit filename="wxsmith/T100DebugFrame.wxs" />
+		<Unit filename="wxsmith/T100PSVMCreateDialog.wxs" />
+		<Unit filename="wxsmith/T100PSVMframe.wxs" />
+		<Unit filename="wxsmith/T100VMFrame.wxs" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+			<wxsmith version="1">
+				<gui name="wxWidgets" src="T100PSVMApp.cpp" main="T100PSVMFrame" init_handlers="necessary" language="CPP" />
+				<resources>
+					<wxFrame wxs="wxsmith/T100PSVMframe.wxs" src="T100PSVMMain.cpp" hdr="T100PSVMMain.h" fwddecl="0" i18n="1" name="T100PSVMFrame" language="CPP" />
+					<wxDialog wxs="wxsmith/T100PSVMCreateDialog.wxs" src="src\wx\dialog\T100PSVMCreateDialog.cpp" hdr="include\wx\dialog\T100PSVMCreateDialog.h" fwddecl="0" i18n="1" name="T100PSVMCreateDialog" language="CPP" />
+					<wxFrame wxs="wxsmith/T100VMFrame.wxs" src="src\wx\T100VMFrame.cpp" hdr="include\wx\T100VMFrame.h" fwddecl="0" i18n="1" name="T100VMFrame" language="CPP" />
+					<wxFrame wxs="wxsmith/T100DebugFrame.wxs" src="src\wx\T100DebugFrame.cpp" hdr="include\wx\T100DebugFrame.h" fwddecl="0" i18n="1" name="T100DebugFrame" language="CPP" />
+				</resources>
+			</wxsmith>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100DX12Renderer" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/T100DX12Renderer" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-D_XM_NO_INTRINSICS_" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DUNICODE" />
+					<Add directory="include/dx12" />
+					<Add directory="include" />
+					<Add directory="include/core" />
+					<Add directory="../T1003DRenderer/include" />
+					<Add directory="../T100Core/include" />
+					<Add directory="include/heap" />
+					<Add directory="../T100Windows/include" />
+					<Add directory="../../../T100Library/Projects/T100Math/include" />
+					<Add directory="../T100String/include" />
+					<Add directory="../../../T100Suite/third" />
+					<Add directory="include/test" />
+					<Add directory="include/math" />
+					<Add directory="include/data" />
+				</Compiler>
+				<Linker>
+					<Add library="../build/libT1003DRenderer.a" />
+					<Add library="../build/libT100Windows.a" />
+					<Add library="../build/libT100String.a" />
+					<Add library="../../../T100Library/Projects/build/libT100Math.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100DX12Renderer" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include/dx12" />
+					<Add directory="include" />
+					<Add directory="include/core" />
+					<Add directory="include/heap" />
+					<Add directory="../../../T100Library/Projects/T100Math/include" />
+					<Add directory="../T100String/include" />
+					<Add directory="include/test" />
+					<Add directory="../../../T100Suite/third" />
+					<Add directory="include/math" />
+					<Add directory="include/data" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="../build/libT1003DRenderer.a" />
+					<Add library="../build/libT100Windows.a" />
+					<Add library="../build/libT100String.a" />
+				</Linker>
+			</Target>
+			<Target title="Library">
+				<Option output="../build/T100DX12Renderer" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-D_XM_NO_INTRINSICS_" />
+					<Add option="-DNDEBUG" />
+					<Add option="-DUNICODE" />
+					<Add directory="include/dx12" />
+					<Add directory="include" />
+					<Add directory="include/core" />
+					<Add directory="../T1003DRenderer/include" />
+					<Add directory="../T100Core/include" />
+					<Add directory="include/heap" />
+					<Add directory="../T100Windows/include" />
+					<Add directory="../../../T100Library/Projects/T100Math/include" />
+					<Add directory="../T100String/include" />
+					<Add directory="include/test" />
+					<Add directory="../../../T100Suite/third" />
+					<Add directory="include/math" />
+					<Add directory="include/data" />
+				</Compiler>
+				<Linker>
+					<Add library="../build/libT1003DRenderer.a" />
+					<Add library="../build/libT100Windows.a" />
+					<Add library="../build/libT100String.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add library="gdi32" />
+			<Add library="user32" />
+			<Add library="kernel32" />
+			<Add library="comctl32" />
+		</Linker>
+		<Unit filename="include/T100DX12Common.h" />
+		<Unit filename="include/T100DX12Renderer.h" />
+		<Unit filename="include/camera/T100DX12CameraManager.h" />
+		<Unit filename="include/context/T100DX12AllContexts.h" />
+		<Unit filename="include/context/T100DX12ContextManager.h" />
+		<Unit filename="include/context/T100DX12ContextManagerBase.h" />
+		<Unit filename="include/context/T100DX12MeshContext.h" />
+		<Unit filename="include/context/T100DX12ScreenContext.h" />
+		<Unit filename="include/core/T100DX12Area.h" />
+		<Unit filename="include/core/T100DX12Card.h" />
+		<Unit filename="include/core/T100DX12Space.h" />
+		<Unit filename="include/core/T100DX12Stance.h" />
+		<Unit filename="include/core/T100DX12Studio.h" />
+		<Unit filename="include/data/T100DX12Camera.h" />
+		<Unit filename="include/data/T100DX12Context.h" />
+		<Unit filename="include/data/T100DX12Frame.h" />
+		<Unit filename="include/data/T100DX12Heap.h" />
+		<Unit filename="include/data/T100DX12Light.h" />
+		<Unit filename="include/data/T100DX12Mesh.h" />
+		<Unit filename="include/data/T100DX12Timer.h" />
+		<Unit filename="include/dx12/T100DX12Header.h" />
+		<Unit filename="include/dx12/T100DX12Tools.h" />
+		<Unit filename="include/dx12/d3dx12.h" />
+		<Unit filename="include/event/T100DX12Event.h" />
+		<Unit filename="include/frame/T100DX12FrameManager.h" />
+		<Unit filename="include/heap/T100DX12HeapDispenser.h" />
+		<Unit filename="include/heap/T100DX12HeapManager.h" />
+		<Unit filename="include/light/T100DX12LightManager.h" />
+		<Unit filename="include/math/DirectXCollision.h" />
+		<Unit filename="include/math/DirectXColors.h" />
+		<Unit filename="include/math/DirectXMath.h" />
+		<Unit filename="include/math/DirectXPackedVector.h" />
+		<Unit filename="include/math/T100DX12MathTools.h" />
+		<Unit filename="include/mesh/T100DX12MeshManager.h" />
+		<Unit filename="include/mesh/T100DX12MeshManagerBase.h" />
+		<Unit filename="include/test/T100DX12BundleTest.h" />
+		<Unit filename="include/test/T100DX12FrameResourceTest.h" />
+		<Unit filename="include/test/T100DX12Test.h" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/T100DX12Renderer.cpp" />
+		<Unit filename="src/camera/T100DX12CameraManager.cpp" />
+		<Unit filename="src/context/T100DX12ContextManager.cpp" />
+		<Unit filename="src/context/T100DX12ContextManagerBase.cpp" />
+		<Unit filename="src/context/T100DX12MeshContext.cpp" />
+		<Unit filename="src/context/T100DX12ScreenContext.cpp" />
+		<Unit filename="src/core/T100DX12Area.cpp" />
+		<Unit filename="src/core/T100DX12Card.cpp" />
+		<Unit filename="src/core/T100DX12Space.cpp" />
+		<Unit filename="src/core/T100DX12Stance.cpp" />
+		<Unit filename="src/core/T100DX12Studio.cpp" />
+		<Unit filename="src/data/T100DX12Camera.cpp" />
+		<Unit filename="src/data/T100DX12Context.cpp" />
+		<Unit filename="src/data/T100DX12Frame.cpp" />
+		<Unit filename="src/data/T100DX12Heap.cpp" />
+		<Unit filename="src/data/T100DX12Light.cpp" />
+		<Unit filename="src/data/T100DX12Mesh.cpp" />
+		<Unit filename="src/data/T100DX12Timer.cpp" />
+		<Unit filename="src/event/T100DX12Event.cpp" />
+		<Unit filename="src/frame/T100DX12FrameManager.cpp" />
+		<Unit filename="src/heap/T100DX12HeapDispenser.cpp" />
+		<Unit filename="src/heap/T100DX12HeapManager.cpp" />
+		<Unit filename="src/light/T100DX12LightManager.cpp" />
+		<Unit filename="src/mesh/T100DX12MeshManager.cpp" />
+		<Unit filename="src/mesh/T100DX12MeshManagerBase.cpp" />
+		<Unit filename="src/test/T100DX12BundleTest.cpp" />
+		<Unit filename="src/test/T100DX12FrameResourceTest.cpp" />
+		<Unit filename="src/test/T100DX12Test.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

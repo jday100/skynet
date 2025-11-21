@@ -1,0 +1,14 @@
+-s -S
+gdb  127.0.0.1:1234
+
+-bios
+-pflash 
+-shim
+
+-mem-path
+
+msys2\mingw64\share\qemu
+
+qemu-system-x86_64 -pflash /c/work/edk2-x86_64-code.fd
+
+

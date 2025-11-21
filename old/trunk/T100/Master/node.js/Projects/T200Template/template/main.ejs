@@ -1,0 +1,54 @@
+
+
+
+<fieldset class="title">
+    <legend><a href="/class/index.html" locale="class">Class</a></legend>
+    <div class="channel">
+        <div>
+            <div class="left">
+                <a target="_blank" href="/">Total : <%=files.length%> Classes</a>
+            </div>
+            <div class="right">
+                <a href="/"></a>
+                <div class="time" id=""></div>
+                <input type="hidden" id="" value="">                            
+            </div>
+        </div>
+        <fieldset>
+            <legend><a href="/class/class.html" locale="class">Class</a></legend>
+            <div>
+                <%
+                    k = files.length;
+                    for(let i=0;i<k;i++){
+                        if(i < k){
+                            %>
+                            <div>
+                                <div class="left">
+                                    <a target="_blank" href="/"><%=files[i]%></a>
+                                </div>
+                                <div class="right">
+                                    <a href="/"></a>
+                                    <div class="time" id=""></div>
+                                    <input type="hidden" id="" value="">                            
+                                </div>
+                            </div>
+                            <%
+                        }else{
+                            %>
+                            <div>
+                                <div>
+                                    <a target="_blank" href="/">unpublished</a>
+                                </div>
+                                <div>
+                                    <a href="">any</a>
+                                    2023-10-10 10:10                                
+                                </div>
+                            </div>
+                            <%
+                        }
+                    }
+                %>
+            </div>
+        </fieldset>
+    </div>
+</fieldset>

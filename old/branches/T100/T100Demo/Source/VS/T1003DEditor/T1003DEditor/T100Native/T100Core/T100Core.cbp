@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100Core" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/T100Core" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="include/console" />
+					<Add directory="include/log" />
+					<Add directory="include/file" />
+					<Add directory="include/test" />
+					<Add directory="include/safe" />
+					<Add directory="include/common" />
+					<Add directory="../T100String/include" />
+				</Compiler>
+				<Linker>
+					<Add library="../build/libT100String.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100Core" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+					<Add directory="include/console" />
+					<Add directory="include/log" />
+					<Add directory="include/file" />
+					<Add directory="include/test" />
+					<Add directory="include/safe" />
+					<Add directory="include/common" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Library">
+				<Option output="../build/T100Core" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="include/console" />
+					<Add directory="include/log" />
+					<Add directory="include/file" />
+					<Add directory="include/test" />
+					<Add directory="include/safe" />
+					<Add directory="include/common" />
+					<Add directory="../T100String/include" />
+				</Compiler>
+				<Linker>
+					<Add library="../build/libT100String.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add library="gdi32" />
+			<Add library="user32" />
+			<Add library="kernel32" />
+			<Add library="comctl32" />
+		</Linker>
+		<Unit filename="include/T100Common.h" />
+		<Unit filename="include/common/T100ConsoleCommon.h" />
+		<Unit filename="include/common/T100DataTypes.h" />
+		<Unit filename="include/common/T100GraphicCommon.h" />
+		<Unit filename="include/common/T100LogCommon.h" />
+		<Unit filename="include/common/T100StringTypes.h" />
+		<Unit filename="include/console/T100AllLogs.h" />
+		<Unit filename="include/console/T100Console.h" />
+		<Unit filename="include/console/T100ConsoleBase.h" />
+		<Unit filename="include/console/T100ConsoleLinux.h" />
+		<Unit filename="include/console/T100ConsoleLog.h" />
+		<Unit filename="include/console/T100ConsoleWindows.h" />
+		<Unit filename="include/file/T100File.h" />
+		<Unit filename="include/file/T100FileAccessor.h" />
+		<Unit filename="include/file/T100FileReader.h" />
+		<Unit filename="include/file/T100FileTools.h" />
+		<Unit filename="include/file/T100FileWriter.h" />
+		<Unit filename="include/file/T100PathTools.h" />
+		<Unit filename="include/file/T100TextFileWriter.h" />
+		<Unit filename="include/log/T100Log.h" />
+		<Unit filename="include/log/T100LogBase.h" />
+		<Unit filename="include/log/T100LogConsole.h" />
+		<Unit filename="include/log/T100LogFile.h" />
+		<Unit filename="include/safe/T100SafeVector.h" />
+		<Unit filename="include/test/T100Test.h" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/console/T100Console.cpp" />
+		<Unit filename="src/console/T100ConsoleBase.cpp" />
+		<Unit filename="src/console/T100ConsoleLinux.cpp" />
+		<Unit filename="src/console/T100ConsoleLog.cpp" />
+		<Unit filename="src/console/T100ConsoleWindows.cpp" />
+		<Unit filename="src/file/T100File.cpp" />
+		<Unit filename="src/file/T100FileAccessor.cpp" />
+		<Unit filename="src/file/T100FileReader.cpp" />
+		<Unit filename="src/file/T100FileTools.cpp" />
+		<Unit filename="src/file/T100FileWriter.cpp" />
+		<Unit filename="src/file/T100PathTools.cpp" />
+		<Unit filename="src/file/T100TextFileWriter.cpp" />
+		<Unit filename="src/log/T100Log.cpp" />
+		<Unit filename="src/log/T100LogBase.cpp" />
+		<Unit filename="src/log/T100LogConsole.cpp" />
+		<Unit filename="src/log/T100LogFile.cpp" />
+		<Unit filename="src/test/T100Test.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

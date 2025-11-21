@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="通用">
+      <UniqueIdentifier>75f74364-81e1-4c2a-876e-6ff5474c53bb</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资产">
+      <UniqueIdentifier>6d28c58d-1904-4945-95fc-d6b79c3d8e82</UniqueIdentifier>
+      <Extensions>bmp;fbx;gif;jpg;jpeg;tga;tiff;tif;png</Extensions>
+    </Filter>
+    <Filter Include="内容">
+      <UniqueIdentifier>9a22523f-e6f7-4bd9-9a04-ef0b85668c19</UniqueIdentifier>
+    </Filter>
+    <Image Include="Assets\LockScreenLogo.scale-200.png">
+      <Filter>资产</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.scale-200.png">
+      <Filter>资产</Filter>
+    </Image>
+    <Image Include="Assets\Square150x150Logo.scale-200.png">
+      <Filter>资产</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.scale-200.png">
+      <Filter>资产</Filter>
+    </Image>
+    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <Filter>资产</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>资产</Filter>
+    </Image>
+    <Image Include="Assets\Wide310x150Logo.scale-200.png">
+      <Filter>资产</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="T100Library\T100Math\include\matrix\T100Matrix3f.h" />
+    <ClInclude Include="T100Library\T100Math\include\matrix\T100Matrix4f.h" />
+    <ClInclude Include="T100Library\T100Math\include\vector\T100Vector2f.h" />
+    <ClInclude Include="T100Library\T100Math\include\vector\T100Vector2u.h" />
+    <ClInclude Include="T100Library\T100Math\include\vector\T100Vector3f.h" />
+    <ClInclude Include="T100Library\T100Math\include\vector\T100Vector3u.h" />
+    <ClInclude Include="T100Library\T100Math\include\vector\T100Vector4f.h" />
+    <ClInclude Include="T100Library\T100Math\include\vector\T100Vector4u.h" />
+    <ClInclude Include="T100Library\T100Math\include\T100MathTools.h" />
+    <ClInclude Include="T100Native\T100Core\include\common\T100ConsoleCommon.h" />
+    <ClInclude Include="T100Native\T100Core\include\common\T100DataTypes.h" />
+    <ClInclude Include="T100Native\T100Core\include\common\T100GraphicCommon.h" />
+    <ClInclude Include="T100Native\T100Core\include\common\T100LogCommon.h" />
+    <ClInclude Include="T100Native\T100Core\include\common\T100StringTypes.h" />
+    <ClInclude Include="T100Native\T100Core\include\console\T100AllLogs.h" />
+    <ClInclude Include="T100Native\T100Core\include\console\T100Console.h" />
+    <ClInclude Include="T100Native\T100Core\include\console\T100ConsoleBase.h" />
+    <ClInclude Include="T100Native\T100Core\include\console\T100ConsoleLinux.h" />
+    <ClInclude Include="T100Native\T100Core\include\console\T100ConsoleLog.h" />
+    <ClInclude Include="T100Native\T100Core\include\console\T100ConsoleWindows.h" />
+    <ClInclude Include="T100Native\T100Core\include\file\T100File.h" />
+    <ClInclude Include="T100Native\T100Core\include\file\T100FileAccessor.h" />
+    <ClInclude Include="T100Native\T100Core\include\file\T100FileReader.h" />
+    <ClInclude Include="T100Native\T100Core\include\file\T100FileTools.h" />
+    <ClInclude Include="T100Native\T100Core\include\file\T100FileWriter.h" />
+    <ClInclude Include="T100Native\T100Core\include\file\T100PathTools.h" />
+    <ClInclude Include="T100Native\T100Core\include\file\T100TextFileWriter.h" />
+    <ClInclude Include="T100Native\T100Core\include\log\T100Log.h" />
+    <ClInclude Include="T100Native\T100Core\include\log\T100LogBase.h" />
+    <ClInclude Include="T100Native\T100Core\include\log\T100LogConsole.h" />
+    <ClInclude Include="T100Native\T100Core\include\log\T100LogFile.h" />
+    <ClInclude Include="T100Native\T100Core\include\safe\T100SafeVector.h" />
+    <ClInclude Include="T100Native\T100Core\include\test\T100Test.h" />
+    <ClInclude Include="T100Native\T100Core\include\T100Common.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\camera\T100DX12CameraManager.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\context\T100DX12AllContexts.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\context\T100DX12ContextManager.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\context\T100DX12ContextManagerBase.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\context\T100DX12MeshContext.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\context\T100DX12ScreenContext.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\core\T100DX12Area.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\core\T100DX12Card.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\core\T100DX12Space.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\core\T100DX12Stance.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\core\T100DX12Studio.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\data\T100DX12Camera.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\data\T100DX12Context.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\data\T100DX12Frame.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\data\T100DX12Heap.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\data\T100DX12Light.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\data\T100DX12Mesh.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\data\T100DX12Timer.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\dx12\d3dx12.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\dx12\T100DX12Header.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\dx12\T100DX12Tools.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\event\T100DX12Event.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\frame\T100DX12FrameManager.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\heap\T100DX12HeapDispenser.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\heap\T100DX12HeapManager.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\light\T100DX12LightManager.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\math\DirectXCollision.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\math\DirectXColors.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\math\DirectXMath.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\math\DirectXPackedVector.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\math\T100DX12MathTools.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\mesh\T100DX12MeshManager.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\mesh\T100DX12MeshManagerBase.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\test\T100DX12BundleTest.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\test\T100DX12FrameResourceTest.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\test\T100DX12Test.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\T100DX12Common.h" />
+    <ClInclude Include="T100Native\T100DX12Renderer\include\T100DX12Renderer.h" />
+    <ClInclude Include="T100Native\T100String\include\T100Unicode.h" />
+    <ClInclude Include="T100Native\T100Thread\include\test\T100ThreadTest.h" />
+    <ClInclude Include="T100Native\T100Thread\include\T100SimpleThread.h" />
+    <ClInclude Include="T100Native\T100Thread\include\T100Thread.h" />
+    <ClInclude Include="T100Native\T100Windows\include\gui\T100ApplicationWindow.h" />
+    <ClInclude Include="T100Native\T1003DRenderer\include\entity\T100AllEntities.h" />
+    <ClInclude Include="T100Native\T1003DRenderer\include\entity\T100City.h" />
+    <ClInclude Include="T100Native\T1003DRenderer\include\entity\T100Dot.h" />
+    <ClInclude Include="T100Native\T1003DRenderer\include\entity\T100Line.h" />
+    <ClInclude Include="T100Native\T1003DRenderer\include\entity\T100Plane.h" />
+    <ClInclude Include="T100Native\T1003DRenderer\include\entity\T100Triangle.h" />
+    <ClInclude Include="T100Native\T1003DRenderer\include\link\T100CameraInstance.h" />
+    <ClInclude Include="T100Native\T1003DRenderer\include\link\T100Editable.h" />
+    <ClInclude Include="T100Native\T1003DRenderer\include\link\T100Entity.h" />
+    <ClInclude Include="T100Native\T1003DRenderer\include\link\T100Instance.h" />
+    <ClInclude Include="T100Native\T1003DRenderer\include\link\T100MeshInstance.h" />
+    <ClInclude Include="T100Native\T1003DRenderer\include\link\T1003DCamera.h" />
+    <ClInclude Include="T100Native\T1003DRenderer\include\link\T1003DConfig.h" />
+    <ClInclude Include="T100Native\T1003DRenderer\include\link\T1003DInput.h" />
+    <ClInclude Include="T100Native\T1003DRenderer\include\link\T1003DLight.h" />
+    <ClInclude Include="T100Native\T1003DRenderer\include\link\T1003DMesh.h" />
+    <ClInclude Include="T100Native\T1003DRenderer\include\link\T1003DObject.h" />
+    <ClInclude Include="T100Native\T1003DRenderer\include\link\T1003DRenderer.h" />
+    <ClInclude Include="T100Native\T1003DRenderer\include\link\T1003DTexture.h" />
+    <ClInclude Include="T100Native\T1003DRenderer\include\link\T1003DTimer.h" />
+    <ClInclude Include="T100Native\T1003DRenderer\include\T1003DCommon.h" />
+    <ClInclude Include="T100Native\T1003DRenderer\include\T1003DRendererCommon.h" />
+    <ClInclude Include="T100Suite\T100Game\include\data\T100GameScene.h" />
+    <ClInclude Include="T100Suite\T100Game\include\link\T100Scene.h" />
+    <ClInclude Include="T100Suite\T100Game\include\tools\T100GameTools.h" />
+    <ClInclude Include="T100Suite\T100Game\include\T100Game.h" />
+    <ClInclude Include="T100Suite\T100Game\include\T100GameInput.h" />
+    <ClInclude Include="T100Suite\T100Game\include\T100GameMotion.h" />
+    <ClInclude Include="T100Suite\T1003DFile\include\3d\decoder\T1003DFileDecoder.h" />
+    <ClInclude Include="T100Suite\T1003DFile\include\3d\encoder\T1003DFileEncoder.h" />
+    <ClInclude Include="T100Suite\T1003DFile\include\3d\T1003DFile3DF.h" />
+    <ClInclude Include="T100Suite\T1003DFile\include\3d\T1003DFileGLTF.h" />
+    <ClInclude Include="T100Suite\T1003DFile\include\3d\T1003DFileReader.h" />
+    <ClInclude Include="T100Suite\T1003DFile\include\3d\T1003DFileWriter.h" />
+    <ClInclude Include="T100Suite\T1003DFile\include\T100FileCommon.h" />
+    <ClInclude Include="T1003DEditor\include\3deditor\T1003DEditorArrow.h" />
+    <ClInclude Include="T1003DEditor\include\3deditor\T1003DEditorDirection.h" />
+    <ClInclude Include="T1003DEditor\include\data\T100TreeItemData.h" />
+    <ClInclude Include="T1003DEditor\include\data\T1003DEditorConfig.h" />
+    <ClInclude Include="T1003DEditor\include\data\T1003DEditorDocument.h" />
+    <ClInclude Include="T1003DEditor\include\game\T100GameCallback.h" />
+    <ClInclude Include="T1003DEditor\include\game\T100GameThread.h" />
+    <ClInclude Include="T1003DEditor\include\serve\T1003DEditorCameraManager.h" />
+    <ClInclude Include="T1003DEditor\include\serve\T1003DEditorEntityManager.h" />
+    <ClInclude Include="T1003DEditor\include\serve\T1003DEditorLightManager.h" />
+    <ClInclude Include="T1003DEditor\include\serve\T1003DEditorServe.h" />
+    <ClInclude Include="T1003DEditor\include\skeletal\T1003DEditorCallback.h" />
+    <ClInclude Include="T1003DEditor\include\skeletal\T1003DEditorScene.h" />
+    <ClInclude Include="T1003DEditor\include\skeletal\T1003DEditorSkeletal.h" />
+    <ClInclude Include="T1003DEditor\include\store\T1003DEditorStore.h" />
+    <ClInclude Include="T1003DEditor\include\view\ctrls\T1003DEditorListCtrl.h" />
+    <ClInclude Include="T1003DEditor\include\view\ctrls\T1003DEditorTreeCtrl.h" />
+    <ClInclude Include="T1003DEditor\include\view\dialog\T1003DEditorConfigDialog.h" />
+    <ClInclude Include="T1003DEditor\include\view\grids\T1003DEditorAllGrids.h" />
+    <ClInclude Include="T1003DEditor\include\view\grids\T1003DEditorCityGrid.h" />
+    <ClInclude Include="T1003DEditor\include\view\grids\T1003DEditorDotGrid.h" />
+    <ClInclude Include="T1003DEditor\include\view\grids\T1003DEditorEntityGrid.h" />
+    <ClInclude Include="T1003DEditor\include\view\grids\T1003DEditorLineGrid.h" />
+    <ClInclude Include="T1003DEditor\include\view\grids\T1003DEditorPlaneGrid.h" />
+    <ClInclude Include="T1003DEditor\include\view\grids\T1003DEditorTriangleGrid.h" />
+    <ClInclude Include="T1003DEditor\include\view\panels\T1003DEditorEntityPanel.h" />
+    <ClInclude Include="T1003DEditor\include\view\panels\T1003DEditorMainPanel.h" />
+    <ClInclude Include="T1003DEditor\include\view\panels\T1003DEditorManagerPanel.h" />
+    <ClInclude Include="T1003DEditor\include\view\panels\T1003DEditorPropertiesPanel.h" />
+    <ClInclude Include="T1003DEditor\include\view\panels\T1003DEditorScenePanel.h" />
+    <ClInclude Include="T1003DEditor\include\view\T1003DEditorMainMenu.h" />
+    <ClInclude Include="T1003DEditor\include\view\T1003DEditorView.h" />
+    <ClInclude Include="T1003DEditor\include\T1003DEditorUICommon.h" />
+    <ClInclude Include="T1003DEditor\T1003DEditorApp.h" />
+    <ClInclude Include="T1003DEditor\T1003DEditorMain.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="T100Library\T100Math\src\matrix\T100Matrix3f.cpp" />
+    <ClCompile Include="T100Library\T100Math\src\matrix\T100Matrix4f.cpp" />
+    <ClCompile Include="T100Library\T100Math\src\vector\T100Vector2f.cpp" />
+    <ClCompile Include="T100Library\T100Math\src\vector\T100Vector2u.cpp" />
+    <ClCompile Include="T100Library\T100Math\src\vector\T100Vector3f.cpp" />
+    <ClCompile Include="T100Library\T100Math\src\vector\T100Vector3u.cpp" />
+    <ClCompile Include="T100Library\T100Math\src\vector\T100Vector4f.cpp" />
+    <ClCompile Include="T100Library\T100Math\src\vector\T100Vector4u.cpp" />
+    <ClCompile Include="T100Native\T100Core\src\console\T100Console.cpp" />
+    <ClCompile Include="T100Native\T100Core\src\console\T100ConsoleBase.cpp" />
+    <ClCompile Include="T100Native\T100Core\src\console\T100ConsoleLinux.cpp" />
+    <ClCompile Include="T100Native\T100Core\src\console\T100ConsoleLog.cpp" />
+    <ClCompile Include="T100Native\T100Core\src\console\T100ConsoleWindows.cpp" />
+    <ClCompile Include="T100Native\T100Core\src\file\T100File.cpp" />
+    <ClCompile Include="T100Native\T100Core\src\file\T100FileAccessor.cpp" />
+    <ClCompile Include="T100Native\T100Core\src\file\T100FileReader.cpp" />
+    <ClCompile Include="T100Native\T100Core\src\file\T100FileTools.cpp" />
+    <ClCompile Include="T100Native\T100Core\src\file\T100FileWriter.cpp" />
+    <ClCompile Include="T100Native\T100Core\src\file\T100PathTools.cpp" />
+    <ClCompile Include="T100Native\T100Core\src\file\T100TextFileWriter.cpp" />
+    <ClCompile Include="T100Native\T100Core\src\log\T100Log.cpp" />
+    <ClCompile Include="T100Native\T100Core\src\log\T100LogBase.cpp" />
+    <ClCompile Include="T100Native\T100Core\src\log\T100LogConsole.cpp" />
+    <ClCompile Include="T100Native\T100Core\src\log\T100LogFile.cpp" />
+    <ClCompile Include="T100Native\T100Core\src\test\T100Test.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\camera\T100DX12CameraManager.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\context\T100DX12ContextManager.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\context\T100DX12ContextManagerBase.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\context\T100DX12MeshContext.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\context\T100DX12ScreenContext.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\core\T100DX12Area.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\core\T100DX12Card.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\core\T100DX12Space.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\core\T100DX12Stance.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\core\T100DX12Studio.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\data\T100DX12Camera.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\data\T100DX12Context.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\data\T100DX12Frame.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\data\T100DX12Heap.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\data\T100DX12Light.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\data\T100DX12Mesh.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\data\T100DX12Timer.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\event\T100DX12Event.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\frame\T100DX12FrameManager.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\heap\T100DX12HeapDispenser.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\heap\T100DX12HeapManager.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\light\T100DX12LightManager.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\mesh\T100DX12MeshManager.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\mesh\T100DX12MeshManagerBase.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\test\T100DX12BundleTest.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\test\T100DX12FrameResourceTest.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\test\T100DX12Test.cpp" />
+    <ClCompile Include="T100Native\T100DX12Renderer\src\T100DX12Renderer.cpp" />
+    <ClCompile Include="T100Native\T100String\src\T100Unicode.cpp" />
+    <ClCompile Include="T100Native\T100Thread\src\test\T100ThreadTest.cpp" />
+    <ClCompile Include="T100Native\T100Thread\src\T100SimpleThread.cpp" />
+    <ClCompile Include="T100Native\T100Thread\src\T100Thread.cpp" />
+    <ClCompile Include="T100Native\T100Windows\src\gui\T100ApplicationWindow.cpp" />
+    <ClCompile Include="T100Native\T1003DRenderer\src\entity\T100City.cpp" />
+    <ClCompile Include="T100Native\T1003DRenderer\src\entity\T100Dot.cpp" />
+    <ClCompile Include="T100Native\T1003DRenderer\src\entity\T100Line.cpp" />
+    <ClCompile Include="T100Native\T1003DRenderer\src\entity\T100Plane.cpp" />
+    <ClCompile Include="T100Native\T1003DRenderer\src\entity\T100Triangle.cpp" />
+    <ClCompile Include="T100Native\T1003DRenderer\src\link\T100CameraInstance.cpp" />
+    <ClCompile Include="T100Native\T1003DRenderer\src\link\T100Editable.cpp" />
+    <ClCompile Include="T100Native\T1003DRenderer\src\link\T100Entity.cpp" />
+    <ClCompile Include="T100Native\T1003DRenderer\src\link\T100Instance.cpp" />
+    <ClCompile Include="T100Native\T1003DRenderer\src\link\T100MeshInstance.cpp" />
+    <ClCompile Include="T100Native\T1003DRenderer\src\link\T1003DCamera.cpp" />
+    <ClCompile Include="T100Native\T1003DRenderer\src\link\T1003DConfig.cpp" />
+    <ClCompile Include="T100Native\T1003DRenderer\src\link\T1003DInput.cpp" />
+    <ClCompile Include="T100Native\T1003DRenderer\src\link\T1003DLight.cpp" />
+    <ClCompile Include="T100Native\T1003DRenderer\src\link\T1003DMesh.cpp" />
+    <ClCompile Include="T100Native\T1003DRenderer\src\link\T1003DObject.cpp" />
+    <ClCompile Include="T100Native\T1003DRenderer\src\link\T1003DRenderer.cpp" />
+    <ClCompile Include="T100Native\T1003DRenderer\src\link\T1003DTexture.cpp" />
+    <ClCompile Include="T100Native\T1003DRenderer\src\link\T1003DTimer.cpp" />
+    <ClCompile Include="T100Suite\T100Game\src\data\T100GameScene.cpp" />
+    <ClCompile Include="T100Suite\T100Game\src\link\T100Scene.cpp" />
+    <ClCompile Include="T100Suite\T100Game\src\tools\T100GameTools.cpp" />
+    <ClCompile Include="T100Suite\T100Game\src\T100Game.cpp" />
+    <ClCompile Include="T100Suite\T100Game\src\T100GameInput.cpp" />
+    <ClCompile Include="T100Suite\T100Game\src\T100GameMotion.cpp" />
+    <ClCompile Include="T100Suite\T1003DFile\src\3d\decoder\T1003DFileDecoder.cpp" />
+    <ClCompile Include="T100Suite\T1003DFile\src\3d\encoder\T1003DFileEncoder.cpp" />
+    <ClCompile Include="T100Suite\T1003DFile\src\3d\T1003DFile3DF.cpp" />
+    <ClCompile Include="T100Suite\T1003DFile\src\3d\T1003DFileGLTF.cpp" />
+    <ClCompile Include="T100Suite\T1003DFile\src\3d\T1003DFileReader.cpp" />
+    <ClCompile Include="T100Suite\T1003DFile\src\3d\T1003DFileWriter.cpp" />
+    <ClCompile Include="T1003DEditor\src\3deditor\T1003DEditorArrow.cpp" />
+    <ClCompile Include="T1003DEditor\src\3deditor\T1003DEditorDirection.cpp" />
+    <ClCompile Include="T1003DEditor\src\data\T100TreeItemData.cpp" />
+    <ClCompile Include="T1003DEditor\src\data\T1003DEditorConfig.cpp" />
+    <ClCompile Include="T1003DEditor\src\data\T1003DEditorDocument.cpp" />
+    <ClCompile Include="T1003DEditor\src\game\T100GameCallback.cpp" />
+    <ClCompile Include="T1003DEditor\src\game\T100GameThread.cpp" />
+    <ClCompile Include="T1003DEditor\src\serve\T1003DEditorCameraManager.cpp" />
+    <ClCompile Include="T1003DEditor\src\serve\T1003DEditorEntityManager.cpp" />
+    <ClCompile Include="T1003DEditor\src\serve\T1003DEditorLightManager.cpp" />
+    <ClCompile Include="T1003DEditor\src\serve\T1003DEditorServe.cpp" />
+    <ClCompile Include="T1003DEditor\src\skeletal\T1003DEditorCallback.cpp" />
+    <ClCompile Include="T1003DEditor\src\skeletal\T1003DEditorScene.cpp" />
+    <ClCompile Include="T1003DEditor\src\skeletal\T1003DEditorSkeletal.cpp" />
+    <ClCompile Include="T1003DEditor\src\store\T1003DEditorStore.cpp" />
+    <ClCompile Include="T1003DEditor\src\view\ctrls\T1003DEditorListCtrl.cpp" />
+    <ClCompile Include="T1003DEditor\src\view\ctrls\T1003DEditorTreeCtrl.cpp" />
+    <ClCompile Include="T1003DEditor\src\view\dialog\T1003DEditorConfigDialog.cpp" />
+    <ClCompile Include="T1003DEditor\src\view\grids\T1003DEditorCityGrid.cpp" />
+    <ClCompile Include="T1003DEditor\src\view\grids\T1003DEditorDotGrid.cpp" />
+    <ClCompile Include="T1003DEditor\src\view\grids\T1003DEditorEntityGrid.cpp" />
+    <ClCompile Include="T1003DEditor\src\view\grids\T1003DEditorLineGrid.cpp" />
+    <ClCompile Include="T1003DEditor\src\view\grids\T1003DEditorPlaneGrid.cpp" />
+    <ClCompile Include="T1003DEditor\src\view\grids\T1003DEditorTriangleGrid.cpp" />
+    <ClCompile Include="T1003DEditor\src\view\panels\T1003DEditorEntityPanel.cpp" />
+    <ClCompile Include="T1003DEditor\src\view\panels\T1003DEditorMainPanel.cpp" />
+    <ClCompile Include="T1003DEditor\src\view\panels\T1003DEditorManagerPanel.cpp" />
+    <ClCompile Include="T1003DEditor\src\view\panels\T1003DEditorPropertiesPanel.cpp" />
+    <ClCompile Include="T1003DEditor\src\view\panels\T1003DEditorScenePanel.cpp" />
+    <ClCompile Include="T1003DEditor\src\view\T1003DEditorMainMenu.cpp" />
+    <ClCompile Include="T1003DEditor\src\view\T1003DEditorView.cpp" />
+    <ClCompile Include="T1003DEditor\T1003DEditorApp.cpp" />
+    <ClCompile Include="T1003DEditor\T1003DEditorMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="T100Native\T100DX12Renderer\include\math\DirectXCollision.inl" />
+    <None Include="T100Native\T100DX12Renderer\include\math\DirectXMathConvert.inl" />
+    <None Include="T100Native\T100DX12Renderer\include\math\DirectXMathMatrix.inl" />
+    <None Include="T100Native\T100DX12Renderer\include\math\DirectXMathMisc.inl" />
+    <None Include="T100Native\T100DX12Renderer\include\math\DirectXMathVector.inl" />
+    <None Include="T100Native\T100DX12Renderer\include\math\DirectXPackedVector.inl" />
+    <None Include="T100Native\T100DX12Renderer\resources\entity\occcity.bin" />
+    <None Include="T1003DEditor\resources\entity\occcity.bin" />
+    <None Include="resources\entity\occcity.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="T100Suite\T100Game\resource.rc" />
+    <ResourceCompile Include="T100Suite\resource.rc" />
+    <ResourceCompile Include="T1003DEditor\resource.rc" />
+  </ItemGroup>
+</Project>

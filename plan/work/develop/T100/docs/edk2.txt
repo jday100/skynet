@@ -1,0 +1,15 @@
+pacman -S git python3 nasm flex bison 
+
+git clone https://github.com/tianocore/edk2.git
+
+git submodule update --init
+
+source edksetup.sh
+
+make -C acpica
+
+make -C BaseTools
+
+
+
+build -a X64 -t GCC5 -b RELEASE -p OvmfPkg/OvmfPkgX64.dsc

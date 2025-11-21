@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100Win32" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/T100Win32" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/gui" />
+					<Add directory="include/gui/event" />
+					<Add directory="include/gui/handler" />
+					<Add directory="include/gui/style" />
+					<Add directory="include/gui/window" />
+					<Add directory="include/gui/data" />
+					<Add directory="include/gui/common" />
+					<Add directory="include/gui/control" />
+					<Add directory="include/gui/dock" />
+					<Add directory="include/gui/layout" />
+					<Add directory="include/gui/listctrl" />
+					<Add directory="include/gui/menu" />
+					<Add directory="include/gui/dc" />
+					<Add directory="include/gui/font" />
+				</Compiler>
+				<Linker>
+					<Add library="../../../../../../build/libT100Object.a" />
+					<Add library="../../../../../../build/libT100Common.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100Win32" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include/gui" />
+					<Add directory="include/gui/event" />
+					<Add directory="include/gui/handler" />
+					<Add directory="include/gui/style" />
+					<Add directory="include/gui/window" />
+					<Add directory="include/gui/data" />
+					<Add directory="include/gui/common" />
+					<Add directory="include/gui/control" />
+					<Add directory="include/gui/dock" />
+					<Add directory="include/gui/layout" />
+					<Add directory="include/gui/listctrl" />
+					<Add directory="include/gui/menu" />
+					<Add directory="include/gui/dc" />
+					<Add directory="include/gui/font" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Library">
+				<Option output="../../../../../../build/T100Win32" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/gui" />
+					<Add directory="include/gui/event" />
+					<Add directory="include/gui/handler" />
+					<Add directory="include/gui/style" />
+					<Add directory="include/gui/window" />
+					<Add directory="include/gui/data" />
+					<Add directory="include/gui/common" />
+					<Add directory="include/gui/control" />
+					<Add directory="include/gui/dock" />
+					<Add directory="include/gui/layout" />
+					<Add directory="include/gui/listctrl" />
+					<Add directory="include/gui/menu" />
+					<Add directory="include/gui/dc" />
+					<Add directory="include/gui/font" />
+				</Compiler>
+				<Linker>
+					<Add library="../../../../../../build/libT100Object.a" />
+					<Add library="../../../../../../build/libT100Common.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fpermissive" />
+			<Add option="-DUNICODE" />
+			<Add directory="../../../../../../T100Library/Source/T100Library/include" />
+			<Add directory="include" />
+			<Add directory="." />
+		</Compiler>
+		<Linker>
+			<Add library="gdi32" />
+			<Add library="user32" />
+			<Add library="kernel32" />
+			<Add library="comctl32" />
+		</Linker>
+		<Unit filename="include/gui/T100AllEvents.h" />
+		<Unit filename="include/gui/T100AllStyles.h" />
+		<Unit filename="include/gui/T100Brush.h" />
+		<Unit filename="include/gui/T100Button.h" />
+		<Unit filename="include/gui/T100ButtonStyle.h" />
+		<Unit filename="include/gui/T100Canvas.h" />
+		<Unit filename="include/gui/T100CanvasStyle.h" />
+		<Unit filename="include/gui/T100Caret.h" />
+		<Unit filename="include/gui/T100ClipBoard.h" />
+		<Unit filename="include/gui/T100Colour4.h" />
+		<Unit filename="include/gui/T100Cursor.h" />
+		<Unit filename="include/gui/T100DC.h" />
+		<Unit filename="include/gui/T100Dialog.h" />
+		<Unit filename="include/gui/T100DialogStyle.h" />
+		<Unit filename="include/gui/T100DockManager.h" />
+		<Unit filename="include/gui/T100DockPanelStyle.h" />
+		<Unit filename="include/gui/T100FillLayout.h" />
+		<Unit filename="include/gui/T100Font.h" />
+		<Unit filename="include/gui/T100FontDialog.h" />
+		<Unit filename="include/gui/T100FontTools.h" />
+		<Unit filename="include/gui/T100Frame.h" />
+		<Unit filename="include/gui/T100FrameStyle.h" />
+		<Unit filename="include/gui/T100ListView.h" />
+		<Unit filename="include/gui/T100ListViewStyle.h" />
+		<Unit filename="include/gui/T100Menu.h" />
+		<Unit filename="include/gui/T100MenuBar.h" />
+		<Unit filename="include/gui/T100MessageBox.h" />
+		<Unit filename="include/gui/T100OpenDialog.h" />
+		<Unit filename="include/gui/T100Panel.h" />
+		<Unit filename="include/gui/T100PanelStyle.h" />
+		<Unit filename="include/gui/T100Pen.h" />
+		<Unit filename="include/gui/T100SaveDialog.h" />
+		<Unit filename="include/gui/T100TextCtrl.h" />
+		<Unit filename="include/gui/T100TextCtrlStyle.h" />
+		<Unit filename="include/gui/T100Time.h" />
+		<Unit filename="include/gui/T100TreeCtrlStyle.h" />
+		<Unit filename="include/gui/T100TreeView.h" />
+		<Unit filename="include/gui/T100Win32Application.h" />
+		<Unit filename="include/gui/T100Win32Start.h" />
+		<Unit filename="include/gui/T100Window.h" />
+		<Unit filename="include/gui/common/T100DockCommon.h" />
+		<Unit filename="include/gui/common/T100EventCommon.h" />
+		<Unit filename="include/gui/common/T100GraphicCommon.h" />
+		<Unit filename="include/gui/common/T100ListViewCommon.h" />
+		<Unit filename="include/gui/common/T100WindowCommon.h" />
+		<Unit filename="include/gui/control/T100Control.h" />
+		<Unit filename="include/gui/data/T100WindowMessageData.h" />
+		<Unit filename="include/gui/dc/T100DCBase.h" />
+		<Unit filename="include/gui/dock/T100DockInfo.h" />
+		<Unit filename="include/gui/dock/T100DockManagerBase.h" />
+		<Unit filename="include/gui/event/T100CommandEvent.h" />
+		<Unit filename="include/gui/event/T100Event.h" />
+		<Unit filename="include/gui/event/T100KeyEvent.h" />
+		<Unit filename="include/gui/event/T100MenuEvent.h" />
+		<Unit filename="include/gui/event/T100MouseEvent.h" />
+		<Unit filename="include/gui/event/T100NotifyEvent.h" />
+		<Unit filename="include/gui/event/T100PaintEvent.h" />
+		<Unit filename="include/gui/event/T100WindowEvent.h" />
+		<Unit filename="include/gui/font/T100FontBase.h" />
+		<Unit filename="include/gui/handler/T100EventHandler.h" />
+		<Unit filename="include/gui/handler/T100IDManager.h" />
+		<Unit filename="include/gui/handler/T100WindowMessageDispatcher.h" />
+		<Unit filename="include/gui/layout/T100Layout.h" />
+		<Unit filename="include/gui/listctrl/T100ListItem.h" />
+		<Unit filename="include/gui/menu/T100MenuBase.h" />
+		<Unit filename="include/gui/menu/T100MenuItem.h" />
+		<Unit filename="include/gui/style/T100WindowStyle.h" />
+		<Unit filename="include/gui/window/T100SelfLoopWindow.h" />
+		<Unit filename="include/gui/window/T100WindowBase.h" />
+		<Unit filename="include/gui/window/T100WindowModule.h" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="resource.h" />
+		<Unit filename="resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="src/gui/application/T100Win32Application.cpp" />
+		<Unit filename="src/gui/base/T100Time.cpp" />
+		<Unit filename="src/gui/button/T100Button.cpp" />
+		<Unit filename="src/gui/canvas/T100Canvas.cpp" />
+		<Unit filename="src/gui/clipboard/T100ClipBoard.cpp" />
+		<Unit filename="src/gui/control/T100Control.cpp" />
+		<Unit filename="src/gui/data/T100WindowMessageData.cpp" />
+		<Unit filename="src/gui/dc/T100DC.cpp" />
+		<Unit filename="src/gui/dc/T100DCBase.cpp" />
+		<Unit filename="src/gui/dialog/T100Dialog.cpp" />
+		<Unit filename="src/gui/dialog/T100FontDialog.cpp" />
+		<Unit filename="src/gui/dialog/T100MessageBox.cpp" />
+		<Unit filename="src/gui/dialog/T100OpenDialog.cpp" />
+		<Unit filename="src/gui/dialog/T100SaveDialog.cpp" />
+		<Unit filename="src/gui/dock/T100DockInfo.cpp" />
+		<Unit filename="src/gui/dock/T100DockManager.cpp" />
+		<Unit filename="src/gui/dock/T100DockManagerBase.cpp" />
+		<Unit filename="src/gui/event/T100CommandEvent.cpp" />
+		<Unit filename="src/gui/event/T100Event.cpp" />
+		<Unit filename="src/gui/event/T100KeyEvent.cpp" />
+		<Unit filename="src/gui/event/T100MenuEvent.cpp" />
+		<Unit filename="src/gui/event/T100MouseEvent.cpp" />
+		<Unit filename="src/gui/event/T100NotifyEvent.cpp" />
+		<Unit filename="src/gui/event/T100PaintEvent.cpp" />
+		<Unit filename="src/gui/event/T100WindowEvent.cpp" />
+		<Unit filename="src/gui/font/T100Font.cpp" />
+		<Unit filename="src/gui/font/T100FontBase.cpp" />
+		<Unit filename="src/gui/font/T100FontTools.cpp" />
+		<Unit filename="src/gui/frame/T100Frame.cpp" />
+		<Unit filename="src/gui/graphic/T100Brush.cpp" />
+		<Unit filename="src/gui/graphic/T100Caret.cpp" />
+		<Unit filename="src/gui/graphic/T100Colour4.cpp" />
+		<Unit filename="src/gui/graphic/T100Cursor.cpp" />
+		<Unit filename="src/gui/graphic/T100Pen.cpp" />
+		<Unit filename="src/gui/handler/T100EventHandler.cpp" />
+		<Unit filename="src/gui/handler/T100IDManager.cpp" />
+		<Unit filename="src/gui/handler/T100WindowMessageDispatcher.cpp" />
+		<Unit filename="src/gui/layout/T100FillLayout.cpp" />
+		<Unit filename="src/gui/layout/T100Layout.cpp" />
+		<Unit filename="src/gui/listctrl/T100ListItem.cpp" />
+		<Unit filename="src/gui/listctrl/T100ListView.cpp" />
+		<Unit filename="src/gui/menu/T100Menu.cpp" />
+		<Unit filename="src/gui/menu/T100MenuBar.cpp" />
+		<Unit filename="src/gui/menu/T100MenuBase.cpp" />
+		<Unit filename="src/gui/menu/T100MenuItem.cpp" />
+		<Unit filename="src/gui/panel/T100Panel.cpp" />
+		<Unit filename="src/gui/style/T100ButtonStyle.cpp" />
+		<Unit filename="src/gui/style/T100CanvasStyle.cpp" />
+		<Unit filename="src/gui/style/T100DialogStyle.cpp" />
+		<Unit filename="src/gui/style/T100DockPanelStyle.cpp" />
+		<Unit filename="src/gui/style/T100FrameStyle.cpp" />
+		<Unit filename="src/gui/style/T100ListViewStyle.cpp" />
+		<Unit filename="src/gui/style/T100PanelStyle.cpp" />
+		<Unit filename="src/gui/style/T100TextCtrlStyle.cpp" />
+		<Unit filename="src/gui/style/T100TreeCtrlStyle.cpp" />
+		<Unit filename="src/gui/style/T100WindowStyle.cpp" />
+		<Unit filename="src/gui/textctrl/T100TextCtrl.cpp" />
+		<Unit filename="src/gui/treectrl/T100TreeView.cpp" />
+		<Unit filename="src/gui/window/T100SelfLoopWindow.cpp" />
+		<Unit filename="src/gui/window/T100Window.cpp" />
+		<Unit filename="src/gui/window/T100WindowBase.cpp" />
+		<Unit filename="src/gui/window/T100WindowModule.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

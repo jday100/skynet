@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="T1003DEditorConfigDialog">
+		<pos_arg>1</pos_arg>
+		<size_arg>1</size_arg>
+		<object class="wxColourPickerCtrl" name="ID_COLOURPICKERCTRL1" variable="ColourPickerCtrl1" member="yes">
+			<colour>#000000</colour>
+			<pos>184,80</pos>
+			<handler function="OnColourPickerCtrl1ColourChanged" entry="EVT_COLOURPICKER_CHANGED" />
+		</object>
+	</object>
+</wxsmith>

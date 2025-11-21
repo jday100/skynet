@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100ShellInstaller" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/T100ShellInstaller" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-D__WXDEBUG__" />
+					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+					<Add directory="include/wizarder" />
+					<Add directory="include/resource" />
+					<Add directory="include/unzip" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="libwxmsw30ud.a" />
+					<Add library="../../../../build/libT100Library.a" />
+					<Add directory="$(#wx)/lib/gcc_dll" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100ShellInstaller" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+					<Add directory="include/wizarder" />
+					<Add directory="include/resource" />
+					<Add directory="include/unzip" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libwxmsw30u.a" />
+					<Add directory="$(#wx)/lib/gcc_dll" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-pipe" />
+			<Add option="-mthreads" />
+			<Add option="-fpermissive" />
+			<Add option="-D__GNUWIN32__" />
+			<Add option="-D__WXMSW__" />
+			<Add option="-DWXUSINGDLL" />
+			<Add option="-DwxUSE_UNICODE" />
+			<Add directory="$(#wx)/include" />
+			<Add directory="../../../../T100Library/Source/T100Library/include" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add directory="$(#wx)/include" />
+		</ResourceCompiler>
+		<Linker>
+			<Add option="-mthreads" />
+		</Linker>
+		<Unit filename="T100ShellInstallerApp.cpp" />
+		<Unit filename="T100ShellInstallerApp.h" />
+		<Unit filename="T100ShellInstallerMain.cpp" />
+		<Unit filename="T100ShellInstallerMain.h" />
+		<Unit filename="include/resource/T100ShellResource.h" />
+		<Unit filename="include/unzip/T100ShellUnzip.h" />
+		<Unit filename="include/wizarder/T100ShellPageWelcome.h" />
+		<Unit filename="include/wizarder/T100ShellWizarder.h" />
+		<Unit filename="resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="src/resource/T100ShellResource.cpp" />
+		<Unit filename="src/unzip/T100ShellUnzip.cpp" />
+		<Unit filename="src/wizarder/T100ShellPageWelcome.cpp" />
+		<Unit filename="src/wizarder/T100ShellWizarder.cpp" />
+		<Unit filename="wxsmith/T100ShellInstallerdialog.wxs" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+			<wxsmith version="1">
+				<gui name="wxWidgets" src="T100ShellInstallerApp.cpp" main="T100ShellInstallerDialog" init_handlers="necessary" language="CPP" />
+				<resources>
+					<wxDialog wxs="wxsmith/T100ShellInstallerdialog.wxs" src="T100ShellInstallerMain.cpp" hdr="T100ShellInstallerMain.h" fwddecl="0" i18n="1" name="T100ShellInstallerDialog" language="CPP" />
+				</resources>
+			</wxsmith>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

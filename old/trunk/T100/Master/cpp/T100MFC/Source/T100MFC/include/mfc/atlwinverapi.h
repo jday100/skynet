@@ -1,0 +1,6 @@
+#ifndef ATLWINVERAPI_H
+#define ATLWINVERAPI_H
+
+
+
+#endif // ATLWINVERAPI_H

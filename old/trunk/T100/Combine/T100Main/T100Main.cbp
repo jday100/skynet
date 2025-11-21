@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100Main" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../build/bin/T100Main" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../build/bin" />
+				<Option object_output="../T100Library/obj" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/main" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100Main" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include/main" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="../T100Library/include" />
+		</Compiler>
+		<Linker>
+			<Add library="../build/libT100Library.a" />
+		</Linker>
+		<Unit filename="include/main/T100Main.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/main/T100Main.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>

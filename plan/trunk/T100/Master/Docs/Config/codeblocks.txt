@@ -1,0 +1,4 @@
+$compiler $options $includes -S -fverbose-asm -c $file
+$compiler $options $includes -c $file -o $object
+
+objcopy -O binary $exe_output $exe_dir/$exe_name.bin

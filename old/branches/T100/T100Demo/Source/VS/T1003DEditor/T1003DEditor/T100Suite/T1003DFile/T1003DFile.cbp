@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T1003DFile" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/T1003DFile" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/link" />
+					<Add directory="include/3d" />
+					<Add directory="include/3d/decoder" />
+					<Add directory="include/3d/encoder" />
+					<Add directory="../../third" />
+					<Add directory="include" />
+					<Add directory="../../../T100Native/Projects/T100String/include" />
+					<Add directory="../../../T100Native/Projects/T100Core/include" />
+				</Compiler>
+				<Linker>
+					<Add library="../../../T100Native/Projects/build/libT100String.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T1003DFile" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include/link" />
+					<Add directory="include/3d" />
+					<Add directory="include/3d/decoder" />
+					<Add directory="include/3d/encoder" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Library">
+				<Option output="../build/T1003DFile" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/link" />
+					<Add directory="include/3d" />
+					<Add directory="include/3d/decoder" />
+					<Add directory="include/3d/encoder" />
+					<Add directory="../../third" />
+					<Add directory="include" />
+					<Add directory="../../../T100Native/Projects/T100String/include" />
+					<Add directory="../../../T100Native/Projects/T100Core/include" />
+				</Compiler>
+				<Linker>
+					<Add library="../../../T100Native/Projects/build/libT100String.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/3d/T1003DFile3DF.h" />
+		<Unit filename="include/3d/T1003DFileGLTF.h" />
+		<Unit filename="include/3d/T1003DFileReader.h" />
+		<Unit filename="include/3d/T1003DFileWriter.h" />
+		<Unit filename="include/3d/decoder/T1003DFileDecoder.h" />
+		<Unit filename="include/3d/encoder/T1003DFileEncoder.h" />
+		<Unit filename="include/T100FileCommon.h" />
+		<Unit filename="include/link/T100File.h" />
+		<Unit filename="include/link/T100FileReader.h" />
+		<Unit filename="include/link/T100FileWriter.h" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/3d/T1003DFile3DF.cpp" />
+		<Unit filename="src/3d/T1003DFileGLTF.cpp" />
+		<Unit filename="src/3d/T1003DFileReader.cpp" />
+		<Unit filename="src/3d/T1003DFileWriter.cpp" />
+		<Unit filename="src/3d/decoder/T1003DFileDecoder.cpp" />
+		<Unit filename="src/3d/encoder/T1003DFileEncoder.cpp" />
+		<Unit filename="src/link/T100File.cpp" />
+		<Unit filename="src/link/T100FileReader.cpp" />
+		<Unit filename="src/link/T100FileWriter.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

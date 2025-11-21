@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T1003DEditor" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/T1003DEditor" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-D__WXDEBUG__" />
+					<Add option="-D_XM_NO_INTRINSICS_" />
+					<Add option="-D_UNICODE" />
+					<Add option="-DUNICODE" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_CONSOLE" />
+					<Add option="-DwxUSE_UNICODE" />
+					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+					<Add directory="include" />
+					<Add directory="include/dx12" />
+					<Add directory="include/3deditor" />
+					<Add directory="include/view" />
+					<Add directory="include/serve" />
+					<Add directory="include/entity" />
+					<Add directory="include/view/dialog" />
+					<Add directory="include/renderer" />
+					<Add directory="include/renderer/data" />
+					<Add directory="include/renderer/core" />
+					<Add directory="include/renderer/model" />
+					<Add directory="include/renderer/scene" />
+					<Add directory="include/renderer/frame" />
+					<Add directory="include/renderer/utils" />
+					<Add directory="include/renderer/heap" />
+					<Add directory="include/renderer/context" />
+					<Add directory="include/math" />
+					<Add directory="include/input" />
+					<Add directory="include/audio" />
+					<Add directory="include/video" />
+					<Add directory="include/game" />
+					<Add directory="include/common" />
+					<Add directory="include/skeletal" />
+					<Add directory="include/renderer/ui" />
+					<Add directory="include/renderer/ui/fonts" />
+					<Add directory="test" />
+					<Add directory="include/renderer/event" />
+					<Add directory="include/game/file" />
+					<Add directory="third" />
+					<Add directory="include/library" />
+					<Add directory="include/game/file/encoder" />
+					<Add directory="include/game/file/decoder" />
+					<Add directory="include/store" />
+					<Add directory="include/data" />
+					<Add directory="../T1003DEditor" />
+					<Add directory="include/motion" />
+					<Add directory="include/collision" />
+					<Add directory="include/renderer/light" />
+					<Add directory="T1003DEditor/include/collision" />
+					<Add directory="build" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="libwxmsw30ud.a" />
+					<Add library="C:/zoo/bin/llvm-mingw-20240518-msvcrt-x86_64/x86_64-w64-mingw32/lib/libdinput8.a" />
+					<Add directory="$(#wx)/lib/gcc_dll" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T1003DEditor" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+					<Add directory="include" />
+					<Add directory="include/dx12" />
+					<Add directory="include/3deditor" />
+					<Add directory="include/view" />
+					<Add directory="include/serve" />
+					<Add directory="include/entity" />
+					<Add directory="include/dx" />
+					<Add directory="include/core" />
+					<Add directory="include/dx12/ui" />
+					<Add directory="include/dx12/data" />
+					<Add directory="include/dx12/ms" />
+					<Add directory="include/renderer" />
+					<Add directory="include/renderer/data" />
+					<Add directory="include/renderer/core" />
+					<Add directory="include/renderer/model" />
+					<Add directory="include/renderer/scene" />
+					<Add directory="include/renderer/frame" />
+					<Add directory="include/renderer/utils" />
+					<Add directory="include/renderer/heap" />
+					<Add directory="include/renderer/context" />
+					<Add directory="include/math" />
+					<Add directory="include/input" />
+					<Add directory="include/audio" />
+					<Add directory="include/video" />
+					<Add directory="include/game" />
+					<Add directory="include/common" />
+					<Add directory="include/skeletal" />
+					<Add directory="include/renderer/ui" />
+					<Add directory="test" />
+					<Add directory="include/renderer/event" />
+					<Add directory="include/game/file" />
+					<Add directory="include/library" />
+					<Add directory="include/game/file/encoder" />
+					<Add directory="include/game/file/decoder" />
+					<Add directory="include/store" />
+					<Add directory="include/data" />
+					<Add directory="include/motion" />
+					<Add directory="T1003DEditor/include/collision" />
+					<Add directory="include/renderer/light" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libwxmsw30u.a" />
+					<Add directory="$(#wx)/lib/gcc_dll" />
+				</Linker>
+			</Target>
+			<Target title="Test">
+				<Option output="bin/Debug/T1003DEditor" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-D__WXDEBUG__" />
+					<Add option="-D_XM_NO_INTRINSICS_" />
+					<Add option="-D_UNICODE" />
+					<Add option="-DUNICODE" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_CONSOLE" />
+					<Add option="-DwxUSE_UNICODE" />
+					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+					<Add directory="include" />
+					<Add directory="include/dx12" />
+					<Add directory="include/3deditor" />
+					<Add directory="include/view" />
+					<Add directory="include/serve" />
+					<Add directory="include/entity" />
+					<Add directory="include/view/dialog" />
+					<Add directory="include/renderer" />
+					<Add directory="include/renderer/data" />
+					<Add directory="include/renderer/core" />
+					<Add directory="include/renderer/model" />
+					<Add directory="include/renderer/scene" />
+					<Add directory="include/renderer/frame" />
+					<Add directory="include/renderer/utils" />
+					<Add directory="include/renderer/heap" />
+					<Add directory="include/renderer/context" />
+					<Add directory="include/math" />
+					<Add directory="include/input" />
+					<Add directory="include/audio" />
+					<Add directory="include/video" />
+					<Add directory="include/game" />
+					<Add directory="include/common" />
+					<Add directory="include/skeletal" />
+					<Add directory="include/renderer/ui" />
+					<Add directory="include/renderer/ui/fonts" />
+					<Add directory="test" />
+					<Add directory="include/renderer/event" />
+					<Add directory="include/game/file" />
+					<Add directory="third" />
+					<Add directory="include/library" />
+					<Add directory="include/game/file/encoder" />
+					<Add directory="include/game/file/decoder" />
+					<Add directory="include/store" />
+					<Add directory="include/data" />
+					<Add directory="include/motion" />
+					<Add directory="include/collision" />
+					<Add directory="../T1003DEditor" />
+					<Add directory="include/renderer/light" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="libwxmsw30ud.a" />
+					<Add library="C:/zoo/bin/llvm-mingw-20240518-msvcrt-x86_64/x86_64-w64-mingw32/lib/libdinput8.a" />
+					<Add directory="$(#wx)/lib/gcc_dll" />
+				</Linker>
+			</Target>
+			<Target title="Library">
+				<Option output="bin/Debug/T1003DEditor" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-D__WXDEBUG__" />
+					<Add option="-D_XM_NO_INTRINSICS_" />
+					<Add option="-D_UNICODE" />
+					<Add option="-DUNICODE" />
+					<Add option="-DNDEBUG" />
+					<Add option="-D_CONSOLE" />
+					<Add option="-DwxUSE_UNICODE" />
+					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+					<Add directory="include" />
+					<Add directory="include/dx12" />
+					<Add directory="include/3deditor" />
+					<Add directory="include/view" />
+					<Add directory="include/serve" />
+					<Add directory="include/entity" />
+					<Add directory="include/view/dialog" />
+					<Add directory="include/renderer" />
+					<Add directory="include/renderer/data" />
+					<Add directory="include/renderer/core" />
+					<Add directory="include/renderer/model" />
+					<Add directory="include/renderer/scene" />
+					<Add directory="include/renderer/frame" />
+					<Add directory="include/renderer/utils" />
+					<Add directory="include/renderer/heap" />
+					<Add directory="include/renderer/context" />
+					<Add directory="include/math" />
+					<Add directory="include/input" />
+					<Add directory="include/audio" />
+					<Add directory="include/video" />
+					<Add directory="include/game" />
+					<Add directory="include/common" />
+					<Add directory="include/skeletal" />
+					<Add directory="include/renderer/ui" />
+					<Add directory="include/renderer/ui/fonts" />
+					<Add directory="test" />
+					<Add directory="include/renderer/event" />
+					<Add directory="include/game/file" />
+					<Add directory="third" />
+					<Add directory="include/library" />
+					<Add directory="include/game/file/encoder" />
+					<Add directory="include/game/file/decoder" />
+					<Add directory="include/store" />
+					<Add directory="include/data" />
+					<Add directory="../T1003DEditor" />
+					<Add directory="include/motion" />
+					<Add directory="T1003DEditor/include/collision" />
+					<Add directory="build" />
+					<Add directory="include/renderer/light" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="libwxmsw30ud.a" />
+					<Add library="C:/zoo/bin/llvm-mingw-20240518-msvcrt-x86_64/x86_64-w64-mingw32/lib/libdinput8.a" />
+					<Add directory="$(#wx)/lib/gcc_dll" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-pipe" />
+			<Add option="-mthreads" />
+			<Add option="-D__GNUWIN32__" />
+			<Add option="-D__WXMSW__" />
+			<Add option="-DWXUSINGDLL" />
+			<Add option="-DwxUSE_UNICODE" />
+			<Add option="-Wall" />
+			<Add directory="$(#wx)/include" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add directory="$(#wx)/include" />
+		</ResourceCompiler>
+		<Linker>
+			<Add option="-mthreads" />
+		</Linker>
+		<Unit filename="T1003DEditorApp.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="T1003DEditorApp.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="T1003DEditorMain.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="T1003DEditorMain.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/3deditor/T1003DEditor.h" />
+		<Unit filename="include/3deditor/T1003DEditorArrow.h" />
+		<Unit filename="include/3deditor/T1003DEditorDirection.h" />
+		<Unit filename="include/3deditor/T1003DEditorInput.h" />
+		<Unit filename="include/3deditor/T1003DEditorScene.h" />
+		<Unit filename="include/T100Common.h" />
+		<Unit filename="include/T100Debug.h" />
+		<Unit filename="include/audio/T100DX12Audio.h" />
+		<Unit filename="include/collision/T100DX12BoundingBox.h" />
+		<Unit filename="include/common/T100DX12Common.h" />
+		<Unit filename="include/common/T100DataTypes.h" />
+		<Unit filename="include/common/T100EntityCommon.h" />
+		<Unit filename="include/common/T100EntityTypes.h" />
+		<Unit filename="include/common/T100FileCommon.h" />
+		<Unit filename="include/common/T100StringTypes.h" />
+		<Unit filename="include/data/T1003DEditorDocument.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="include/data/T100Camera.h" />
+		<Unit filename="include/data/T100DX12Colour.h" />
+		<Unit filename="include/data/T100Light.h" />
+		<Unit filename="include/data/T100Material.h" />
+		<Unit filename="include/data/T100Scene.h" />
+		<Unit filename="include/data/T100Texture.h" />
+		<Unit filename="include/dx12/DirectXCollision.h" />
+		<Unit filename="include/dx12/DirectXColors.h" />
+		<Unit filename="include/dx12/DirectXMath.h" />
+		<Unit filename="include/dx12/DirectXMathConvert.inl" />
+		<Unit filename="include/dx12/DirectXMathMatrix.inl" />
+		<Unit filename="include/dx12/DirectXMathMisc.inl" />
+		<Unit filename="include/dx12/DirectXPackedVector.h" />
+		<Unit filename="include/dx12/T100DX12Header.h" />
+		<Unit filename="include/dx12/T100DX12Tools.h" />
+		<Unit filename="include/dx12/d3dx12.h" />
+		<Unit filename="include/entity/T100AllEntities.h" />
+		<Unit filename="include/entity/T100City.h" />
+		<Unit filename="include/entity/T100Dot.h" />
+		<Unit filename="include/entity/T100Editable.h" />
+		<Unit filename="include/entity/T100Entity.h" />
+		<Unit filename="include/entity/T100Line.h" />
+		<Unit filename="include/entity/T100Mesh.h" />
+		<Unit filename="include/entity/T100Plane.h" />
+		<Unit filename="include/entity/T100Rectangle.h" />
+		<Unit filename="include/entity/T100SkyBox.h" />
+		<Unit filename="include/entity/T100Sphere.h" />
+		<Unit filename="include/entity/T100Triangle.h" />
+		<Unit filename="include/game/T100Game.h" />
+		<Unit filename="include/game/file/T1003DFileReader.h" />
+		<Unit filename="include/game/file/T1003DFileWriter.h" />
+		<Unit filename="include/game/file/T100DataParser.h" />
+		<Unit filename="include/game/file/T100File.h" />
+		<Unit filename="include/game/file/T100File3DF.h" />
+		<Unit filename="include/game/file/T100FileGLTF.h" />
+		<Unit filename="include/game/file/T100FileH3D.h" />
+		<Unit filename="include/game/file/T100FileReader.h" />
+		<Unit filename="include/game/file/T100FileTools.h" />
+		<Unit filename="include/game/file/T100FileWriter.h" />
+		<Unit filename="include/game/file/T100JSON.h" />
+		<Unit filename="include/game/file/decoder/T100File3DFDecoder.h" />
+		<Unit filename="include/game/file/decoder/T100FileDecoder.h" />
+		<Unit filename="include/game/file/decoder/T100FileGLTFDecoder.h" />
+		<Unit filename="include/game/file/decoder/T100FileH3DDecoder.h" />
+		<Unit filename="include/game/file/encoder/T100File3DFEncoder.h" />
+		<Unit filename="include/game/file/encoder/T100FileEncoder.h" />
+		<Unit filename="include/game/file/encoder/T100FileGLTFEncoder.h" />
+		<Unit filename="include/input/T100DX12Input.h" />
+		<Unit filename="include/library/T100StringTools.h" />
+		<Unit filename="include/library/T100Unicode.h" />
+		<Unit filename="include/math/T100Matrix3.h" />
+		<Unit filename="include/math/T100Matrix4.h" />
+		<Unit filename="include/math/T100Vector2u.h" />
+		<Unit filename="include/math/T100Vector3.h" />
+		<Unit filename="include/math/T100Vector3u.h" />
+		<Unit filename="include/math/T100Vector4.h" />
+		<Unit filename="include/math/T100Vector4u.h" />
+		<Unit filename="include/math/T100VectorTools.h" />
+		<Unit filename="include/motion/T100DX12Motion.h" />
+		<Unit filename="include/renderer/T100DX12FrameResource.h" />
+		<Unit filename="include/renderer/T100DX12Renderer.h" />
+		<Unit filename="include/renderer/context/T100DX12AllContexts.h" />
+		<Unit filename="include/renderer/context/T100DX12ContextCity.h" />
+		<Unit filename="include/renderer/context/T100DX12ContextDot.h" />
+		<Unit filename="include/renderer/context/T100DX12ContextLine.h" />
+		<Unit filename="include/renderer/context/T100DX12ContextManager.h" />
+		<Unit filename="include/renderer/context/T100DX12ContextManagerBase.h" />
+		<Unit filename="include/renderer/context/T100DX12ContextPlane.h" />
+		<Unit filename="include/renderer/context/T100DX12ContextRectangle.h" />
+		<Unit filename="include/renderer/context/T100DX12ContextSphere.h" />
+		<Unit filename="include/renderer/context/T100DX12ContextTriangle.h" />
+		<Unit filename="include/renderer/core/T100DX12Area.h" />
+		<Unit filename="include/renderer/core/T100DX12Bundle.h" />
+		<Unit filename="include/renderer/core/T100DX12Card.h" />
+		<Unit filename="include/renderer/core/T100DX12Core.h" />
+		<Unit filename="include/renderer/core/T100DX12Discrete.h" />
+		<Unit filename="include/renderer/core/T100DX12Dynamic.h" />
+		<Unit filename="include/renderer/core/T100DX12Dynamic2.h" />
+		<Unit filename="include/renderer/core/T100DX12Line.h" />
+		<Unit filename="include/renderer/core/T100DX12Space.h" />
+		<Unit filename="include/renderer/core/T100DX12Stance.h" />
+		<Unit filename="include/renderer/core/T100DX12Studio.h" />
+		<Unit filename="include/renderer/core/T100DX12Triangle.h" />
+		<Unit filename="include/renderer/data/T100DX12Camera.h" />
+		<Unit filename="include/renderer/data/T100DX12Config.h" />
+		<Unit filename="include/renderer/data/T100DX12Context.h" />
+		<Unit filename="include/renderer/data/T100DX12Frame.h" />
+		<Unit filename="include/renderer/data/T100DX12Heap.h" />
+		<Unit filename="include/renderer/data/T100DX12Light.h" />
+		<Unit filename="include/renderer/data/T100DX12Model.h" />
+		<Unit filename="include/renderer/data/T100DX12Scene.h" />
+		<Unit filename="include/renderer/data/T100DX12Texture.h" />
+		<Unit filename="include/renderer/event/T100DX12Event.h" />
+		<Unit filename="include/renderer/frame/T100DX12FrameManager.h" />
+		<Unit filename="include/renderer/heap/T100DX12HeapDispenser.h" />
+		<Unit filename="include/renderer/heap/T100DX12HeapManager.h" />
+		<Unit filename="include/renderer/light/T100DX12LightManager.h" />
+		<Unit filename="include/renderer/model/T100DX12ModelManager.h" />
+		<Unit filename="include/renderer/model/T100DX12ModelManagerBase.h" />
+		<Unit filename="include/renderer/model/T100DX12PipelineStateFactory.h" />
+		<Unit filename="include/renderer/model/T100DX12RootSignatureFactory.h" />
+		<Unit filename="include/renderer/scene/T100DX12SceneManager.h" />
+		<Unit filename="include/renderer/ui/T100DX12Font.h" />
+		<Unit filename="include/renderer/ui/T100DX12FontManager.h" />
+		<Unit filename="include/renderer/ui/T100DX12Text.h" />
+		<Unit filename="include/renderer/ui/fonts/consola24.h" />
+		<Unit filename="include/renderer/utils/T100DX12Timer.h" />
+		<Unit filename="include/serve/T1003DEditor3DFDecoder.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="include/serve/T1003DEditor3DFEncoder.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="include/serve/T1003DEditorEntityManager.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="include/serve/T1003DEditorGLTFDecoder.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="include/serve/T1003DEditorServe.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="include/skeletal/T1003DEditorCallback.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="include/skeletal/T1003DEditorSkeletal.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="include/skeletal/T1003DEditorTask.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="include/skeletal/T1003DEditorThread.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="include/store/T1003DEditorStore.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="include/store/T1003DEditorTaskReadFile.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="include/video/T100DX12Video.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="include/view/T1003DEditorEntityPanel.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="include/view/T1003DEditorMainPanel.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="include/view/T1003DEditorPropertiesPanel.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="include/view/T1003DEditorView.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="include/view/dialog/T1003DEditorConfigDialog.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="resource.rc">
+			<Option compilerVar="WINDRES" />
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="src/3deditor/T1003DEditor.cpp" />
+		<Unit filename="src/3deditor/T1003DEditorArrow.cpp" />
+		<Unit filename="src/3deditor/T1003DEditorDirection.cpp" />
+		<Unit filename="src/3deditor/T1003DEditorInput.cpp" />
+		<Unit filename="src/3deditor/T1003DEditorScene.cpp" />
+		<Unit filename="src/audio/T100DX12Audio.cpp" />
+		<Unit filename="src/collision/T100DX12BoundingBox.cpp" />
+		<Unit filename="src/data/T1003DEditorDocument.cpp" />
+		<Unit filename="src/data/T100Camera.cpp" />
+		<Unit filename="src/data/T100DX12Colour.cpp" />
+		<Unit filename="src/data/T100Light.cpp" />
+		<Unit filename="src/data/T100Material.cpp" />
+		<Unit filename="src/data/T100Scene.cpp" />
+		<Unit filename="src/data/T100Texture.cpp" />
+		<Unit filename="src/dx12/T100DX12Tools.cpp" />
+		<Unit filename="src/entity/T100City.cpp" />
+		<Unit filename="src/entity/T100Dot.cpp" />
+		<Unit filename="src/entity/T100Editable.cpp" />
+		<Unit filename="src/entity/T100Entity.cpp" />
+		<Unit filename="src/entity/T100Line.cpp" />
+		<Unit filename="src/entity/T100Mesh.cpp" />
+		<Unit filename="src/entity/T100Plane.cpp" />
+		<Unit filename="src/entity/T100Rectangle.cpp" />
+		<Unit filename="src/entity/T100SkyBox.cpp" />
+		<Unit filename="src/entity/T100Sphere.cpp" />
+		<Unit filename="src/entity/T100Triangle.cpp" />
+		<Unit filename="src/game/T100Game.cpp" />
+		<Unit filename="src/game/file/T1003DFileReader.cpp" />
+		<Unit filename="src/game/file/T1003DFileWriter.cpp" />
+		<Unit filename="src/game/file/T100DataParser.cpp" />
+		<Unit filename="src/game/file/T100File.cpp" />
+		<Unit filename="src/game/file/T100File3DF.cpp" />
+		<Unit filename="src/game/file/T100FileGLTF.cpp" />
+		<Unit filename="src/game/file/T100FileH3D.cpp" />
+		<Unit filename="src/game/file/T100FileReader.cpp" />
+		<Unit filename="src/game/file/T100FileTools.cpp" />
+		<Unit filename="src/game/file/T100FileWriter.cpp" />
+		<Unit filename="src/game/file/T100JSON.cpp" />
+		<Unit filename="src/game/file/decoder/T100File3DFDecoder.cpp" />
+		<Unit filename="src/game/file/decoder/T100FileDecoder.cpp" />
+		<Unit filename="src/game/file/decoder/T100FileGLTFDecoder.cpp" />
+		<Unit filename="src/game/file/decoder/T100FileH3DDecoder.cpp" />
+		<Unit filename="src/game/file/encoder/T100File3DFEncoder.cpp" />
+		<Unit filename="src/game/file/encoder/T100FileEncoder.cpp" />
+		<Unit filename="src/game/file/encoder/T100FileGLTFEncoder.cpp" />
+		<Unit filename="src/input/T100DX12Input.cpp" />
+		<Unit filename="src/library/T100StringTools.cpp" />
+		<Unit filename="src/library/T100Unicode.cpp" />
+		<Unit filename="src/math/T100Matrix3.cpp" />
+		<Unit filename="src/math/T100Matrix4.cpp" />
+		<Unit filename="src/math/T100Vector2u.cpp" />
+		<Unit filename="src/math/T100Vector3.cpp" />
+		<Unit filename="src/math/T100Vector3u.cpp" />
+		<Unit filename="src/math/T100Vector4.cpp" />
+		<Unit filename="src/math/T100Vector4u.cpp" />
+		<Unit filename="src/math/T100VectorTools.cpp" />
+		<Unit filename="src/motion/T100DX12Motion.cpp" />
+		<Unit filename="src/renderer/T100DX12FrameResource.cpp" />
+		<Unit filename="src/renderer/T100DX12Renderer.cpp" />
+		<Unit filename="src/renderer/context/T100DX12ContextCity.cpp" />
+		<Unit filename="src/renderer/context/T100DX12ContextDot.cpp" />
+		<Unit filename="src/renderer/context/T100DX12ContextLine.cpp" />
+		<Unit filename="src/renderer/context/T100DX12ContextManager.cpp" />
+		<Unit filename="src/renderer/context/T100DX12ContextManagerBase.cpp" />
+		<Unit filename="src/renderer/context/T100DX12ContextPlane.cpp" />
+		<Unit filename="src/renderer/context/T100DX12ContextRectangle.cpp" />
+		<Unit filename="src/renderer/context/T100DX12ContextSphere.cpp" />
+		<Unit filename="src/renderer/context/T100DX12ContextTriangle.cpp" />
+		<Unit filename="src/renderer/core/T100DX12Area.cpp" />
+		<Unit filename="src/renderer/core/T100DX12Bundle.cpp" />
+		<Unit filename="src/renderer/core/T100DX12Card.cpp" />
+		<Unit filename="src/renderer/core/T100DX12Core.cpp" />
+		<Unit filename="src/renderer/core/T100DX12Discrete.cpp" />
+		<Unit filename="src/renderer/core/T100DX12Dynamic.cpp" />
+		<Unit filename="src/renderer/core/T100DX12Dynamic2.cpp" />
+		<Unit filename="src/renderer/core/T100DX12Line.cpp" />
+		<Unit filename="src/renderer/core/T100DX12Space.cpp" />
+		<Unit filename="src/renderer/core/T100DX12Stance.cpp" />
+		<Unit filename="src/renderer/core/T100DX12Studio.cpp" />
+		<Unit filename="src/renderer/core/T100DX12Triangle.cpp" />
+		<Unit filename="src/renderer/data/T100DX12Camera.cpp" />
+		<Unit filename="src/renderer/data/T100DX12Config.cpp" />
+		<Unit filename="src/renderer/data/T100DX12Context.cpp" />
+		<Unit filename="src/renderer/data/T100DX12Frame.cpp" />
+		<Unit filename="src/renderer/data/T100DX12Heap.cpp" />
+		<Unit filename="src/renderer/data/T100DX12Light.cpp" />
+		<Unit filename="src/renderer/data/T100DX12Model.cpp" />
+		<Unit filename="src/renderer/data/T100DX12Scene.cpp" />
+		<Unit filename="src/renderer/data/T100DX12Texture.cpp" />
+		<Unit filename="src/renderer/event/T100DX12Event.cpp" />
+		<Unit filename="src/renderer/frame/T100DX12FrameManager.cpp" />
+		<Unit filename="src/renderer/heap/T100DX12HeapDispenser.cpp" />
+		<Unit filename="src/renderer/heap/T100DX12HeapManager.cpp" />
+		<Unit filename="src/renderer/light/T100DX12LightManager.cpp" />
+		<Unit filename="src/renderer/model/T100DX12ModelManager.cpp" />
+		<Unit filename="src/renderer/model/T100DX12ModelManagerBase.cpp" />
+		<Unit filename="src/renderer/model/T100DX12PipelineStateFactory.cpp" />
+		<Unit filename="src/renderer/model/T100DX12RootSignatureFactory.cpp" />
+		<Unit filename="src/renderer/scene/T100DX12SceneManager.cpp" />
+		<Unit filename="src/renderer/ui/T100DX12Font.cpp" />
+		<Unit filename="src/renderer/ui/T100DX12FontManager.cpp" />
+		<Unit filename="src/renderer/ui/T100DX12Text.cpp" />
+		<Unit filename="src/renderer/utils/T100DX12Timer.cpp" />
+		<Unit filename="src/serve/T1003DEditor3DFDecoder.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="src/serve/T1003DEditor3DFEncoder.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="src/serve/T1003DEditorEntityManager.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="src/serve/T1003DEditorGLTFDecoder.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="src/serve/T1003DEditorServe.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="src/skeletal/T1003DEditorCallback.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="src/skeletal/T1003DEditorSkeletal.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="src/skeletal/T1003DEditorTask.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="src/skeletal/T1003DEditorThread.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="src/store/T1003DEditorStore.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="src/store/T1003DEditorTaskReadFile.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="src/video/T100DX12Video.cpp" />
+		<Unit filename="src/view/T1003DEditorEntityPanel.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="src/view/T1003DEditorMainPanel.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="src/view/T1003DEditorPropertiesPanel.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="src/view/T1003DEditorView.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="src/view/dialog/T1003DEditorConfigDialog.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="test/T100FileTest.cpp" />
+		<Unit filename="test/T100FileTest.h" />
+		<Unit filename="test/T100JSONTest.cpp" />
+		<Unit filename="test/T100JSONTest.h" />
+		<Unit filename="test/T100MathTest.cpp" />
+		<Unit filename="test/T100MathTest.h" />
+		<Unit filename="test/main.cpp">
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="third/json/json.hpp" />
+		<Unit filename="wxsmith/T1003DEditorConfigDialog.wxs">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="wxsmith/T1003DEditorframe.wxs">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Extensions>
+			<lib_finder disable_auto="1" />
+			<wxsmith version="1">
+				<gui name="wxWidgets" src="T1003DEditorApp.cpp" main="T1003DEditorFrame" init_handlers="necessary" language="CPP" />
+				<resources>
+					<wxFrame wxs="wxsmith/T1003DEditorframe.wxs" src="T1003DEditorMain.cpp" hdr="T1003DEditorMain.h" fwddecl="0" i18n="1" name="T1003DEditorFrame" language="CPP" />
+					<wxDialog wxs="wxsmith/T1003DEditorConfigDialog.wxs" src="src\view\dialog\T1003DEditorConfigDialog.cpp" hdr="include\view\dialog\T1003DEditorConfigDialog.h" fwddecl="0" i18n="1" name="T1003DEditorConfigDialog" language="CPP" />
+				</resources>
+			</wxsmith>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

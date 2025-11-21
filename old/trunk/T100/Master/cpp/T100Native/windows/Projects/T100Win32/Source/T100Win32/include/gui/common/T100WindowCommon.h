@@ -1,0 +1,66 @@
+#ifndef T100WINDOWCOMMON_H
+#define T100WINDOWCOMMON_H
+
+#include <windows.h>
+
+namespace T100WINDOWS{
+
+
+typedef enum T100ORIENTATION_TYPE{
+    T100HORIZONTAL,
+    T100VERTICAL,
+    T100BOTH
+}T100ORIENTATION_TYPE;
+
+typedef enum T100LINE_TYPE{
+    T100LINE_NONE           = PS_NULL,
+    T100LINE_SOLID          = PS_SOLID,
+    T100LINE_DASH           = PS_DASH,
+    T100LINE_DOT            = PS_DOT,
+    T100LINE_DASHDOT        = PS_DASHDOT,
+    T100LINE_DASHDOTDOT     = PS_DASHDOTDOT,
+    T100LINE_INSIDEFRAME    = PS_INSIDEFRAME,
+    T100LINE_USERSTYLE      = PS_USERSTYLE,
+    T100LINE_ALTERNATE      = PS_ALTERNATE
+}T100LINE_TYPE;
+
+typedef enum T100BRUSH_TYPE{
+    T100BRUSH_NONE          = BS_NULL,
+    T100BRUSH_SOLID         = BS_SOLID,
+    T100BRUSH_HATCHED       = BS_HATCHED,
+    T100BRUSH_PATTERN       = BS_PATTERN,
+    T100BRUSH_INDEXED       = BS_INDEXED,
+    T100BRUSH_DIBPATTERN    = BS_DIBPATTERN,
+    T100BRUSH_DIBPATTERNPT  = BS_DIBPATTERNPT,
+    T100BRUSH_PATTERN8X8    = BS_PATTERN8X8,
+    T100BRUSH_DIBPATTERN8X8 = BS_DIBPATTERN8X8,
+    T100BRUSH_MONOPATTERN   = BS_MONOPATTERN
+}T100BRUSH_TYPE;
+
+
+#define     T100WINDOW_TYPE_T100DIALOG                  L"T100Dialog"
+
+#define     T100WINDOW_TYPE_WINDOW                      L"window"
+#define     T100WINDOW_TYPE_BUTTON                      L"button"
+#define     T100WINDOW_TYPE_EDIT                        L"edit"
+#define     T100WINDOW_TYPE_LISTVIEW                    L"SysListView32"
+#define     T100WINDOW_TYPE_TREECTRL                    L"SysTreeView32"
+
+#define     T100WINDOW_TYPE_T100PANE                    L"T100Pane"
+#define     T100WINDOW_TYPE_T100DOCK_WINDOW             L"T100DockWindow"
+
+#define     T100WINDOW_TYPE_T100WINDOW                  L"T100Window"
+#define     T100WINDOW_TYPE_T100SELFLOOP_WINDOW         L"T100SelfLoopWindow"
+#define     T100WINDOW_TYPE_T100PANEL                   L"T100Panel"
+#define     T100WINDOW_TYPE_T100CANVAS                  L"T100Canvas"
+#define     T100WINDOW_TYPE_T100FRAME                   L"T100Frame"
+#define     T100WINDOW_TYPE_T100BUTTON                  L"T100Button"
+#define     T100WINDOW_TYPE_T100TEXTCTRL                L"T100TextCtrl"
+#define     T100WINDOW_TYPE_T100LISTVIEW                L"T100ListView"
+#define     T100WINDOW_TYPE_T100TREECTRL                L"T100TreeCtrl"
+
+
+}
+
+
+#endif // T100WINDOWCOMMON_H

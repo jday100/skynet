@@ -1,0 +1,5 @@
+#ifndef ATLSIMPCOLL_H
+#define ATLSIMPCOLL_H
+
+
+#endif // ATLSIMPCOLL_H

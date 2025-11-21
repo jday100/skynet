@@ -1,0 +1,14 @@
+#ifndef T100FILECOMMON_H
+#define T100FILECOMMON_H
+
+typedef enum {
+    T100FILE_32,
+    T100FILE_64
+}T100FILE_TYPE;
+
+typedef enum {
+    T100FILE_EXE,
+    T100FILE_DLL
+}T100FILE_TYPE2;
+
+#endif // T100FILECOMMON_H

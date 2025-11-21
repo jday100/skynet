@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100WxMain" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../build/T100WxMain" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../build" />
+				<Option object_output="obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-D__WXDEBUG__" />
+					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="libwxmsw30ud.a" />
+					<Add directory="$(#wx)/lib/gcc_dll" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100WxMain" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libwxmsw30u.a" />
+					<Add directory="$(#wx)/lib/gcc_dll" />
+				</Linker>
+			</Target>
+			<Target title="Library">
+				<Option output="../build/T100WxMain" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-D__WXDEBUG__" />
+					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="libwxmsw30ud.a" />
+					<Add directory="$(#wx)/lib/gcc_dll" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-pipe" />
+			<Add option="-mthreads" />
+			<Add option="-D__GNUWIN32__" />
+			<Add option="-D__WXMSW__" />
+			<Add option="-DWXUSINGDLL" />
+			<Add option="-DwxUSE_UNICODE" />
+			<Add directory="$(#wx)/include" />
+			<Add directory="." />
+			<Add directory="include" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add directory="$(#wx)/include" />
+		</ResourceCompiler>
+		<Linker>
+			<Add option="-mthreads" />
+		</Linker>
+		<Unit filename="T100WxMainApp.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="T100WxMainApp.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="T100WxMainMain.cpp" />
+		<Unit filename="T100WxMainMain.h" />
+		<Unit filename="include/T100Common.h" />
+		<Unit filename="include/library/common/T100Constants.h" />
+		<Unit filename="include/library/common/T100DataTypes.h" />
+		<Unit filename="include/library/common/T100StringTypes.h" />
+		<Unit filename="include/library/storage/file/T100File.h" />
+		<Unit filename="include/library/storage/folder/T100Folder.h" />
+		<Unit filename="include/library/storage/path/T100Path.h" />
+		<Unit filename="include/library/thread/T100Thread.h" />
+		<Unit filename="include/plugin/T100Library.h" />
+		<Unit filename="include/plugin/T100Plugin.h" />
+		<Unit filename="include/plugin/T100PluginActuator.h" />
+		<Unit filename="include/plugin/T100PluginManager.h" />
+		<Unit filename="include/plugin/T100WxPluginActuator.h" />
+		<Unit filename="resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="src/library/storage/file/T100File.cpp" />
+		<Unit filename="src/library/storage/folder/T100Folder.cpp" />
+		<Unit filename="src/library/storage/path/T100Path.cpp" />
+		<Unit filename="src/library/thread/T100Thread.cpp" />
+		<Unit filename="src/plugin/T100Library.cpp" />
+		<Unit filename="src/plugin/T100Plugin.cpp" />
+		<Unit filename="src/plugin/T100PluginActuator.cpp" />
+		<Unit filename="src/plugin/T100PluginManager.cpp" />
+		<Unit filename="src/plugin/T100WxPluginActuator.cpp" />
+		<Unit filename="wxsmith/T100WxMainframe.wxs" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+			<wxsmith version="1">
+				<gui name="wxWidgets" src="T100WxMainApp.cpp" main="T100WxMainFrame" init_handlers="necessary" language="CPP" />
+				<resources>
+					<wxFrame wxs="wxsmith/T100WxMainframe.wxs" src="T100WxMainMain.cpp" hdr="T100WxMainMain.h" fwddecl="0" i18n="1" name="T100WxMainFrame" language="CPP" />
+				</resources>
+			</wxsmith>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

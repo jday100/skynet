@@ -1,0 +1,133 @@
+#ifndef T100DIAGRAMCOMMON_H
+#define T100DIAGRAMCOMMON_H
+
+#include <wx/wx.h>
+#include "T100Common.h"
+
+enum {
+    T100DIAGRAM_MENU_FILE_CREATE            = wxID_HIGHEST + 1,
+    T100DIAGRAM_MENU_FILE_OPEN,
+    T100DIAGRAM_MENU_FILE_CLOSE,
+    T100DIAGRAM_MENU_FILE_SAVE,
+    T100DIAGRAM_MENU_FILE_SAVE_AS,
+    T100DIAGRAM_MENU_FILE_QUIT,
+    T100DIAGRAM_MENU_EDIT_UNDO,
+    T100DIAGRAM_MENU_EDIT_REDO,
+    T100DIAGRAM_MENU_EDIT_CUT,
+    T100DIAGRAM_MENU_EDIT_COPY,
+    T100DIAGRAM_MENU_EDIT_PASTE,
+    T100DIAGRAM_MENU_VIEW_MANAGER,
+    T100DIAGRAM_MENU_VIEW_PROPERTY,
+    T100DIAGRAM_MENU_SEARCH_FIND,
+    T100DIAGRAM_MENU_DEVELOP_IMPORT,
+    T100DIAGRAM_MENU_SETUP_CONFIG,
+    T100DIAGRAM_MENU_HELP_ABOUT
+};
+
+typedef enum {
+    T100CANVAS_STATE_NONE           = 0,
+    //
+    T100CANVAS_STATE_SHOW,
+    T100CANVAS_STATE_CREATE,
+    T100CANVAS_STATE_SELECTED,
+    T100CANVAS_STATE_EDIT,
+    //
+    T100CANVAS_STATE_PAINT,
+    T100CANVAS_STATE_SIZING,
+    T100CANVAS_STATE_MOVING,
+    //
+    T100CANVAS_STATE_TIE_START,
+    T100CANVAS_STATE_TIE_END,
+    //
+    T100CANVAS_STATE_MAX
+}T100CANVAS_STATE;
+
+enum {
+    T100ELEMENT_LIGATURE        = 1,
+    T100ELEMENT_SINGLE_TRACK,
+    T100ELEMENT_BIDIRECTION,
+    T100ELEMENT_MODULE          = 10
+};
+
+
+typedef enum{
+    T100FILE_NONE           = 0,
+    //
+    T100FILE_TEXT,          //TXT
+    T100FILE_BINARY,        //BIN
+    //
+    T100FILE_BITMAP,        //BMP   位图
+    T100FILE_ICON,          //ICO   图标
+    //
+    T100FILE_PICTURE,       //PIC   图片
+    T100FILE_GRAPH,         //GRP   图片
+    //
+    T100FILE_DIAGRAM,       //DGM   流程图
+    T100FILE_DRAWING,       //DRW   图形
+    T100FILE_CHART,         //CHT   图表
+    T100FILE_MAP,           //MAP   地图
+    T100FILE_PHOTO,         //PHT   照片
+    //
+    T100FILE_VIDEO,
+    T100FILE_MOVIE,
+    T100FILE_AUDIO,
+    T100FILE_SOUND,
+    T100FILE_MUSIC,
+    //
+    T100FILE_DOCUMENT,      //DOC
+    T100FILE_DATABASE,      //DAT
+    T100FILE_LOG,           //LOG
+    T100FILE_TEMPORARY,     //TMP
+    //
+    T100FILE_FONT,          //FNT
+    T100FILE_VDISK,         //VDK
+    T100FILE_EXECUTABLE,    //EXE
+    T100FILE_LIBRARY,       //LIB
+    //
+    T100FILE_ASSEMBLY,      //ASM
+    T100FILE_OBJECT,        //OBJ
+    T100FILE_SYMBOL,        //SYM
+    //
+    T100FILE_PAL,           //PAL
+    T100FILE_MAIN,          //MN
+    T100FILE_PROJECT,       //PRJ
+    T100FILE_CODE,          //COD
+    T100FILE_PLAN,          //PLN
+    T100FILE_DICTIONARY,    //DCT
+    //
+    T100FILE_WEB,           //WEB
+    //
+    T100FILE_MAX
+}T100FILE_TYPE;
+
+typedef struct{
+    T100UINT                SIGN;
+}T100FILE_HEAD;
+
+typedef enum{
+    T100FILE_READ,
+    T100FILE_WRITE,
+    T100FILE_STREAM
+}T100FILE_MODE;
+
+typedef enum{
+    T100DIAGRAM_COMMON          = 1,
+    T100DIAGRAM_MAX
+}T100DIAGRAM_TYPE;
+
+typedef struct{
+    T100FILE_HEAD               COMMON;
+    T100UINT                    TYPE;
+    T100UINT                    VERSION;
+}T100DIAGRAM_HEAD;
+
+typedef struct{
+    T100UINT                    WIDTH       = 0;
+    T100UINT                    HEIGHT      = 0;
+}T100DIAGRAM_CANVAS;
+
+typedef struct{
+    T100UINT                    TYPE;
+}T100ELEMENT;
+
+#endif // T100DIAGRAMCOMMON_H

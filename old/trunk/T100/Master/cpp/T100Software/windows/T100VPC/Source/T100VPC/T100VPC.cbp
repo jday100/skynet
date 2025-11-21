@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100VPC" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/T100VPC" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/vpc" />
+					<Add directory="include" />
+					<Add directory="include/vpc/view" />
+				</Compiler>
+				<Linker>
+					<Add library="../../../../../build/libT100Windows.a" />
+					<Add library="../../../../../build/libT100Library.a" />
+					<Add library="C:/zoo/bin/llvm-mingw-20240518-msvcrt-x86_64/x86_64-w64-mingw32/lib/libwinhvplatform.a" />
+					<Add library="gdi32" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100VPC" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include/vpc" />
+					<Add directory="include" />
+					<Add directory="include/vpc/view" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="../../../../../T100Library/Source/T100Library/include" />
+			<Add directory="../../../../../T100Native/windows/Source/T100Windows/include" />
+			<Add directory="include" />
+		</Compiler>
+		<Linker>
+			<Add library="gdi32" />
+			<Add library="user32" />
+			<Add library="kernel32" />
+			<Add library="comctl32" />
+		</Linker>
+		<Unit filename="include/T100VPCApplication.h" />
+		<Unit filename="include/vpc/T100Host.h" />
+		<Unit filename="include/vpc/T100Memory.h" />
+		<Unit filename="include/vpc/T100Port.h" />
+		<Unit filename="include/vpc/T100Processor.h" />
+		<Unit filename="include/vpc/T100VPC.h" />
+		<Unit filename="include/vpc/T100VPCCommon.h" />
+		<Unit filename="include/vpc/view/T100VPCFrame.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/T100VPCApplication.cpp" />
+		<Unit filename="src/vpc/T100Host.cpp" />
+		<Unit filename="src/vpc/T100Memory.cpp" />
+		<Unit filename="src/vpc/T100Port.cpp" />
+		<Unit filename="src/vpc/T100Processor.cpp" />
+		<Unit filename="src/vpc/T100VPC.cpp" />
+		<Unit filename="src/vpc/view/T100VPCFrame.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>

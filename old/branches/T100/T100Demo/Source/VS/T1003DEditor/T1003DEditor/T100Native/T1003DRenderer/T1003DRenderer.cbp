@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T1003DRenderer" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/T1003DRenderer" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/link" />
+					<Add directory="../T100Core/include" />
+					<Add directory="include" />
+					<Add directory="include/entity" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T1003DRenderer" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include/link" />
+					<Add directory="include/entity" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Library">
+				<Option output="../build/T1003DRenderer" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Release/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-g" />
+					<Add directory="include/link" />
+					<Add directory="include" />
+					<Add directory="../T100Core/include" />
+					<Add directory="include/entity" />
+					<Add directory="../../../T100Suite/third" />
+					<Add directory="../../../T100Library/Projects/T100Math/include" />
+					<Add directory="../T100DX12Renderer/include" />
+				</Compiler>
+				<Linker>
+					<Add library="../../../T100Library/Projects/build/libT100Math.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/T1003DCommon.h" />
+		<Unit filename="include/T1003DRendererCommon.h" />
+		<Unit filename="include/entity/T100AllEntities.h" />
+		<Unit filename="include/entity/T100City.h" />
+		<Unit filename="include/entity/T100Dot.h" />
+		<Unit filename="include/entity/T100Line.h" />
+		<Unit filename="include/entity/T100Plane.h" />
+		<Unit filename="include/entity/T100Triangle.h" />
+		<Unit filename="include/link/T1003DCamera.h" />
+		<Unit filename="include/link/T1003DConfig.h" />
+		<Unit filename="include/link/T1003DInput.h" />
+		<Unit filename="include/link/T1003DLight.h" />
+		<Unit filename="include/link/T1003DMesh.h" />
+		<Unit filename="include/link/T1003DObject.h" />
+		<Unit filename="include/link/T1003DRenderer.h" />
+		<Unit filename="include/link/T1003DTexture.h" />
+		<Unit filename="include/link/T1003DTimer.h" />
+		<Unit filename="include/link/T100CameraInstance.h" />
+		<Unit filename="include/link/T100Editable.h" />
+		<Unit filename="include/link/T100Entity.h" />
+		<Unit filename="include/link/T100Instance.h" />
+		<Unit filename="include/link/T100MeshInstance.h" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/entity/T100City.cpp" />
+		<Unit filename="src/entity/T100Dot.cpp" />
+		<Unit filename="src/entity/T100Line.cpp" />
+		<Unit filename="src/entity/T100Plane.cpp" />
+		<Unit filename="src/entity/T100Triangle.cpp" />
+		<Unit filename="src/link/T1003DCamera.cpp" />
+		<Unit filename="src/link/T1003DConfig.cpp" />
+		<Unit filename="src/link/T1003DInput.cpp" />
+		<Unit filename="src/link/T1003DLight.cpp" />
+		<Unit filename="src/link/T1003DMesh.cpp" />
+		<Unit filename="src/link/T1003DObject.cpp" />
+		<Unit filename="src/link/T1003DRenderer.cpp" />
+		<Unit filename="src/link/T1003DTexture.cpp" />
+		<Unit filename="src/link/T1003DTimer.cpp" />
+		<Unit filename="src/link/T100CameraInstance.cpp" />
+		<Unit filename="src/link/T100Editable.cpp" />
+		<Unit filename="src/link/T100Entity.cpp" />
+		<Unit filename="src/link/T100Instance.cpp" />
+		<Unit filename="src/link/T100MeshInstance.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
